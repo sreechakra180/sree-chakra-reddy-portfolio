@@ -1,0 +1,898 @@
+==== PROJECT: 1 ====
+Path: 1
+Technologies: Python
+Total Files: 8
+Sample Files: .gitignore, Capture1.PNG, chatbot.py, q1.PNG, q2.PNG, q3.PNG, q4.PNG, README.md
+--- README (1\README.md) ---
+# WikiChat Gateway - Context-Aware NLP Agent
+
+State-preserving NLP conversational agent equipped with dynamic intent-registration hook systems and live API queries.
+
+# Overview
+Modern LLMs and conversational agents face significant information latency, rendering them incapable of answering queries about real-time, evolving world events without high retrieval costs. `WikiChat Gateway` solves this by introducing a lightweight, state-preserving conversational routing controller that intercepts user intents and dynamically maps them to live external knowledge repositories (like Wikipedia's API). This architecture allows low-latency, real-world factual retrieval without training overhead, serving as a lightweight alternative to full-scale semantic search architectures.
+
+# Core Engineering Highlights
+* **Dynamic Intent-Registration Hooks**: Employs a custom `@register_call` decorator pattern that maps specific input queries (e.g., "whoIs") to dedicated callback handlers.
+* **API Disambiguation Resolver**: Implements a self-healing Wikipedia search loop that automatically falls back to secondary candidates if the primary query fails, optimizing retrieval success rate.
+* **State-Preserving Conversational Flow**: Integrates template-based chat state orchestration, ensuring the session memory is maintained across conversational exchanges.
+
+# What Makes This Project Different
+Most conversational bots rely on static rule files or heavy RAG setups that introduce high computation costs. `WikiChat Gateway` uses an event-driven hook system to bind API lookups directly to pattern registrations. This hybrid approach enables execution-level modularity where new knowledge tools can be registered dynamically in a single line of code, turning a standard prompt loop into an extensible agent gateway.
+
+# System Architecture
+```mermaid
+graph TD
+    User([User Client]) --> |Raw Input| Chat[Chat Controller]
+    Chat --> |Intent Parsing| Router{Intent Router}
+    Router --> |Matched Hook| Hook[
+
+==== PROJECT: 2nd brain ====
+Path: 2nd brain
+Technologies: TypeScript, JavaScript, CSS, HTML
+Total Files: 86
+Sample Files: .env, .gitignore, bun.lockb, components.json, eslint.config.js, index.html, package-lock.json, package.json, postcss.config.js, README.md, tailwind.config.ts, tsconfig.app.json, tsconfig.json, tsconfig.node.json, vite.config.ts, public\favicon.ico, public\placeholder.svg, public\robots.txt, src\App.css, src\App.tsx
+--- README (2nd brain\README.md) ---
+# Second Brain - AI-Powered Personal Knowledge Graph
+
+A secure, local-first personal knowledge management platform with automated AI tagging, sentiment categorization, and semantic search.
+
+# Overview
+Engineers and researchers face high cognitive overhead when organizing disparate technical thoughts, articles, and journal entries. Existing note-taking tools are static, lacking semantic relationships and contextual search. `Second Brain` introduces an automated, AI-driven tagging and indexing layer over note entries. By extracting important terms, calculating emotional sentiment indices, and generating automated summaries, the system transforms flat text entries into structured, queryable knowledge graphs synced to a cloud backend.
+
+# Core Engineering Highlights
+* **Automated Metadata Extraction Pipeline**: Parses raw text entries to calculate sentiment metrics, generate tags, and isolate critical terminologies.
+* **Supabase Client Layer**: Integrates client-side JWT authentication with relational schema mappings in Supabase.
+* **Dynamic AI Chat Interface**: Features an interactive RAG-like playground where users query their aggregated notes through natural language conversations.
+* **Polished State Syncing**: Orchestrates component states across dashboard filters, editing dialog states, and real-time database updates.
+
+# What Makes This Project Different
+`Second Brain` is engineered beyond simple database storage. It maps out a custom schema (`diary_entries`) containing array fields for `important_terms` and `tags` beside float fields for `sentiment` scores. When a user logs a note, the system treats it as a node in a personal knowledge graph. The frontend is built with modular state isolation (React + TypeScript), allowing immediate UI updates while background synchronization tasks write back to Supabase.
+
+# System Architecture
+```mermaid
+graph TD
+    Client[React Frontend] --> |Auth Check| Auth[Auth Context]
+    Client --> |CRUD Operations| DB[Supabase Client]
+   
+
+==== PROJECT: AI ====
+Path: AI
+Technologies: Python, CSS, JavaScript, Jupyter Notebook, TypeScript, HTML
+Total Files: 272
+Sample Files: .gitignore, incredibox-v2-smile-pleaseee.mp3, Open-Cluely-Stable.zip, README.md, swarmmind-fixed-files (1).zip, swarmmind-full.tar.gz, form\index.html, Open-Cluely-Stable\.gitignore, Open-Cluely-Stable\BUILD_INSTRUCTIONS.md, Open-Cluely-Stable\logs.txt, Open-Cluely-Stable\package-lock.json, Open-Cluely-Stable\package.json, Open-Cluely-Stable\README.md, Open-Cluely-Stable\repomix-output.txt, Open-Cluely-Stable\SETUP-VOSK.md, Open-Cluely-Stable\transcribe.py, Open-Cluely-Stable\vosk_live.py, Open-Cluely-Stable\assets\chrome.ico, Open-Cluely-Stable\assets\README.md, Open-Cluely-Stable\src\gemini-service.js
+--- README (AI\README.md) ---
+# AI Architecture & System Design Repositories
+
+A compilation of engineering case studies, systems architecture proposals, and machine learning research papers.
+
+# Overview
+This repository contains technical reports, proposals, and design reviews detailing big-data systems, event-driven web applications, and neural network pipelines. Rather than simple code blocks, this collection illustrates production-level system designs, database schemas, and ML model evaluations, serving as a blueprint for big-tech and enterprise software architectures.
+
+# Core Engineering Highlights
+* **Systems Architecture Diagrams**: Includes technical designs detailing data processing pipelines, database normalization layouts, and RAG architectures.
+* **Model Evaluations**: Analyzes neural network model parameterizations, metrics comparisons, and deployment limits.
+* **Event-Driven App Proposals**: Documents multi-user platform designs featuring low-latency pub/sub message brokers and load-balanced microservices.
+
+# What Makes This Project Different
+Unlike standard code repositories, this project acts as a portfolio of architectural thinking and infrastructure designs. It showcases documentations on database systems design (DBMS), big data management (BDM), machine learning foundations (MLF), and community aggregation networks, demonstrating product strategy and systems scalability planning.
+
+# System Architecture
+Detailed systems-level proposals including:
+* **Storage Systems**: Normalization vs Denormalization tradeoffs for relational databases.
+* **Machine Learning Pipelines**: Detailed steps for data preprocessing, model selection, hyperparameter tuning, and containerization.
+* **Event-Driven Infrastructures**: High-availability networks using message queues and API gateways.
+
+# Tech Stack & Engineering Rationale
+* **Systems Engineering Diagrams** -> Architectural visualization of distributed nodes.
+* **Evaluation Frameworks** -> Structured metrics evaluation for machine learning models
+
+--- README (AI\Open-Cluely-Stable\README.md) ---
+# Open-Cluely: AI Meeting Assistant
+
+A powerful, **100% undetectable** AI meeting assistant inspired by Cluely and Parakeet AI. This Electron desktop app provides real-time AI assistance during meetings, interviews, and calls while remaining completely invisible to screen share and recordings.
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Electron](https://img.shields.io/badge/Electron-28.0.0-47848F.svg)
+![Gemini](https://img.shields.io/badge/Gemini-2.0%20Flash-4285F4.svg)
+
+## Features
+
+### Core Capabilities
+
+- **🎤 Real-time Speech Transcription** - Live, accurate offline transcription with Vosk (see words as you speak!)
+- **🤖 AI-Powered Assistance** - Context-aware responses using Google Gemini API
+- **📸 Screenshot Analysis** - Analyze screen content for coding problems, presentations, or documents
+- **💡 "What Should I Say?"** - Get intelligent response suggestions based on conversation context
+- **📝 Meeting Notes Generation** - Automatic meeting summaries, action items, and key points
+- **📊 Conversation Insights** - Real-time analysis of discussion topics and decisions
+- **🔒 100% Private & Undetectable** - Invisible in screen shares, recordings, and participant lists
+
+### Stealth Features
+
+- **Transparent overlay window** with glass-morphism UI
+- **Always-on-top** but never captured in screenshots or screen shares
+- **Emergency hide button** (Ctrl+Alt+Shift+X)
+- **Opacity control** for maximum invisibility
+- **Frameless, taskbar-hidden** window
+- **Smart positioning** (corners, edges, or center)
+
+### AI Features (Powered by Gemini 2.0 Flash)
+
+- **Intelligent rate limiting** (10 requests/minute, 4M tokens/day)
+- **Exponential backoff** for failed requests
+- **Conversation context tracking** (up to 20 messages)
+- **Multiple AI modes:**
+  - Screenshot analysis with OCR
+  - Question answering
+  - Response suggestions
+  - Meeting notes generation
+  - Follow-up email drafting
+  - Conversation insights
+
+## Installation
+
+### Prerequisites
+
+- **Node.js**
+
+--- README (AI\Open-Cluely-Stable\assets\README.md) ---
+# Assets Folder - Chrome Icons Required
+
+This folder should contain Chrome icon files for building the disguised executable.
+
+## Required Files:
+
+1. **chrome.ico** (Windows) - 256x256 or higher
+2. **chrome.icns** (macOS) - For Mac builds
+3. **chrome.png** (Linux) - 512x512 for Linux builds
+
+## How to Get Chrome Icons:
+
+### Method 1: Extract from Chrome Installation
+
+**Windows:**
+1. Navigate to: `C:\Program Files\Google\Chrome\Application\`
+2. Find `chrome.exe`
+3. Right-click → Properties → Icons tab
+4. Use a tool like [ResourceHacker](http://www.angusj.com/resourcehacker/) to extract
+5. Save as `chrome.ico` in this folder
+
+### Method 2: Download from Icon Sites
+
+**Recommended Sites:**
+- https://icon-icons.com/icon/chrome/194617
+- https://www.iconfinder.com/icons/386254/chrome_icon
+- https://icons8.com/icons/set/chrome
+
+**Download Requirements:**
+- **Windows**: ICO format, 256x256 pixels minimum
+- **macOS**: ICNS format (if building for Mac)
+- **Linux**: PNG format, 512x512 pixels
+
+### Method 3: Use Online Converter
+
+If you have a Chrome PNG:
+1. Go to: https://convertio.co/png-ico/
+2. Upload Chrome PNG (high resolution)
+3. Convert to ICO (256x256)
+4. Download and save as `chrome.ico`
+
+## File Placement:
+
+After obtaining the icons, your folder should look like:
+```
+d:\Open-Cluely\assets\
+  ├── chrome.ico     ← Windows icon (REQUIRED for building)
+  ├── chrome.icns    ← macOS icon (optional)
+  ├── chrome.png     ← Linux icon (optional)
+  └── README.md      ← This file
+```
+
+## Verification:
+
+Before building, verify:
+- [ ] `chrome.ico` exists in this folder
+- [ ] Icon is 256x256 or higher resolution
+- [ ] Icon looks like the official Chrome logo
+
+## Quick Build Test:
+
+After adding icons, test the build:
+```bash
+npm run build
+```
+
+If successful, you should see:
+- `dist/GoogleChrome.exe` with Chrome icon
+- Icon visible in File Explorer
+- Icon shows in Task Manager
+
+## Troubleshooting:
+
+**Icon doesn't show:**
+- Make sure filename is exactly `chrome.ico`
+- Check file is in I
+
+--- README (AI\swarmmind\README.md) ---
+# SwarmMind — AGI-Inspired Intelligence System
+
+A production-grade system combining **swarm intelligence**, **retrieval-augmented generation (RAG)**, and **self-improving learning loops** to deliver high-quality, multi-perspective responses.
+
+## Architecture
+
+```
+┌──────────────┐   ┌──────────────┐   ┌──────────────────┐
+│  INPUT LAYER │──▶│  RAG LAYER   │──▶│  SWARM LAYER     │
+│  Classify &  │   │  Vector +    │   │  50-500 agents   │
+│  Route       │   │  Graph RAG   │   │  debate & reach   │
+└──────────────┘   └──────────────┘   │  consensus        │
+                                      └────────┬─────────┘
+                                               │
+                    ┌──────────────┐   ┌────────▼─────────┐
+                    │  EVALUATION  │◀──│  GENERATION LAYER │
+                    │  5-metric    │   │  RAG / Swarm /    │
+                    │  scoring     │   │  Hybrid / Direct  │
+                    └──────┬───────┘   └──────────────────┘
+                           │
+                    ┌──────▼───────┐
+                    │ SELF-IMPROVE │
+                    │  LoRA/QLoRA  │
+                    │  fine-tuning │
+                    └──────────────┘
+```
+
+## Quick Start
+
+```bash
+# 1. Copy environment config
+cp .env.example .env
+
+# 2. Start all services
+make up
+
+# 3. Initialize database & seed data
+make init
+
+# 4. Open frontend
+open http://localhost:5173
+```
+
+## Services
+
+| Service        | Port  | Description                      |
+|----------------|-------|----------------------------------|
+| Frontend       | 5173  | React + TypeScript + Vite        |
+| Backend API    | 8000  | FastAPI application              |
+| PostgreSQL     | 5432  | Metadata & conversation storage  |
+| Qdrant         | 6333  | Vector embeddings store          |
+| Neo4j          | 7474  | Knowledge graph                  |
+| Redis          | 6379  | Queue & caching                  |
+| MinIO          | 9000  | Model artifact storage           |
+| Prometheus     | 9090  | Metr
+
+==== PROJECT: BBC classification ====
+Path: BBC classification
+Technologies: Python
+Total Files: 4
+Sample Files: .gitignore, bbc_news.csv, BBC_News_Code.py, README.md
+--- README (BBC classification\README.md) ---
+# BBC news NLP Sequential Classifier
+
+An end-to-end natural language processing pipeline and sequential deep learning classifier for multi-class document categorization.
+
+# Overview
+Parsing and categorizing large flows of textual news feeds is computationally expensive for editorial teams. Standard keyword matching is too fragile to capture context. `BBC News Classifier` implements a deep learning pipeline that preprocesses raw documents, extracts sentiment values, models word frequencies, and trains a sequential neural network (Keras) to classify documents into categorical classes (e.g., tech, business, politics), illustrating document intelligence processing at scale.
+
+# Core Engineering Highlights
+* **Multi-Stage Text Preprocessing**: Integrates regex token cleaning, stopword removal, and word stemming via NLTK (PorterStemmer).
+* **VADER Sentiment Indexing**: Calculates sentiment polarity scores for text segments, injecting behavioral metrics into the feature pipeline.
+* **Sequential Neural Network**: Implements a Keras-based deep neural network with multiple dense layers optimized for multi-class classification.
+* **Exploratory Data Visualizations**: Generates word clouds and data distribution grids using Seaborn and Plotly.
+
+# What Makes This Project Different
+This pipeline combines lexical NLP techniques (stemming, tokenizing) with emotional sentiment profiling (VADER) and sequential deep learning models (Keras). By feeding structured text characteristics and sentiment dimensions into a deep neural net, the model learns complex vocabulary patterns, making it highly robust against shifts in writing style compared to basic Naive Bayes models.
+
+# System Architecture
+```mermaid
+graph TD
+    Raw[Raw CSV News Data] --> |Regex Clean| Token[NLTK Tokenizer]
+    Token --> |Stemming| Stem[Porter Stemmer]
+    Stem --> |TF-IDF / Frequency| Vector[Feature Vectors]
+    Raw --> |VADER Analyzer| Sentiment[Sentiment Scores]
+    Vector & Sentiment --> |Input Layer| Keras[Keras S
+
+==== PROJECT: BDM PROJ ====
+Path: BDM PROJ
+Technologies: 
+Total Files: 46
+Sample Files: .gitignore, 23f3003224@ds.study.iitm.ac.in_mid_term_6988d4b76d63b_v3.pdf, 23F3003224_BDM_Project_MIDTERM_PROP_CHANGED.docx, 23F3003224_BDM_Project_MIDTERM_PROP_CHANGED_DEC_TERM.docx, 23F3003224_BDM_Project_MIDTERM_PROP_CHANGED_DEC_TERM.pdf, 23F3003224_BDM_Project_MIDTERM_submission.pdf, 23F3003224_BDM_Project_Proposal.pdf, BDM_FINAL_23f2003741.pdf, BDM_FINAL_23f3003224_TEMP.docx, BDM_FINAL_23f3003224_temp.pdf, BDM_Midterm_Report_23F2003741.pdf, Checklist for BDM Project.pdf, EC_2026_Syllabus.pdf, HP_DATA.txt, HP_DATA_FINAL_COMPLETE_DEC(CLEANED_DATA).csv, HP_Data_FULL_Table.xlsx, HP_Sir_Virtual_Expanded_Data_Enhanced.xlsx, HP_Sir_Virtual_Expanded_Data_Feb_to_July_2025.pdf, HP_Sir_Virtual_Expanded_Data_FULL_COMBINED.xlsx, IIT M BDM PROJECT.pptx
+--- README (BDM PROJ\README.md) ---
+# BDM Project - Business Intelligence & Database Engineering
+
+Enterprise-level data engineering analysis, database schemas, and analytics reports.
+
+# Overview
+Modern business operations generate massive amounts of unstructured transaction data that remains siloed in incompatible formats. `BDM Project` resolves this by proposing structured database schemas, data cleansing pipelines, and business intelligence models. This analysis establishes clean ETL workflows that transform raw spreadsheet transactions into highly structured database models, enabling operations analytics.
+
+# Core Engineering Highlights
+* **Schema Design and Normalization**: Defines clean relational database structures (schema.sql) mapping entities, keys, and relational constraints.
+* **Data Cleansing Pipelines**: Outlines structured cleaning processes for complex datasets to remove duplicates, null fields, and inconsistencies.
+* **BI Report Proposals**: Provides business intelligence summaries analyzing transactional performance, market segmentation, and database integrity.
+
+# What Makes This Project Different
+This project is an advanced analysis of business data structures, focusing on the interface between raw database engineering and enterprise strategy. By outlining normalized relational schemas and data cleansing strategies, it bridges the gap between data warehousing and business-level analytics.
+
+# System Architecture
+* **ETL Operations**: Cleansing, transforming, and staging raw transaction records.
+* **Database Layer**: Normalized schemas designed to prevent redundancies and enforce relational integrity.
+* **Analytics Layer**: Business intelligence reports visualizing key transaction metrics.
+
+# Tech Stack & Engineering Rationale
+* **SQL** -> Designing relational schemas and optimizing transaction operations.
+* **Pandas / Excel Data Tools** -> Processing and cleaning raw tabular files.
+* **BI Methodologies** -> Structuring reports that link technical performance to business metrics.
+
+# Fut
+
+==== PROJECT: CV INTEGRATED BOT ====
+Path: CV INTEGRATED BOT
+Technologies: TypeScript, JavaScript, CSS, HTML
+Total Files: 29
+Sample Files: .gitignore, project-bolt-sb1-jdjz3a8z.zip, README.md, project\.env, project\.gitignore, project\deno.json, project\eslint.config.js, project\index.html, project\package-lock.json, project\package.json, project\postcss.config.js, project\README.md, project\tailwind.config.js, project\tsconfig.app.json, project\tsconfig.json, project\tsconfig.node.json, project\vite.config.ts, project\.bolt\config.json, project\.bolt\prompt, project\src\App.tsx
+--- README (CV INTEGRATED BOT\README.md) ---
+# VisionAgent - Real-Time Browser-Based AI Vision System
+
+A modular, real-time client-edge computer vision pipeline capturing live camera frames and routing them to cloud inference models.
+
+# Overview
+Building real-time computer vision applications in the browser often introduces massive latency due to raw frame sizes and slow API serialization. `VisionAgent` establishes a lightweight, local-first capture architecture. It interfaces with the client's webcam using HTML5 canvas streams, packages frames efficiently, and exposes them to cloud-hosted vision-language models (like LLaVA or Claude Vision via Groq/API endpoints). This framework provides a scalable foundation for client-side visual telemetry and real-time object classification.
+
+# Core Engineering Highlights
+* **Low-Latency Camera Hook**: Implements a React hook (`useCamera`) that hooks into browser media streams, rendering to canvas with optimized frame intervals.
+* **Vision Service API**: Configures a service wrapper (`visionService`) that serializes frame data and pipelines it to vision model APIs.
+* **Real-Time Telemetry Panels**: Features a results renderer (`ResultsPanel`) displaying model predictions, token metrics, and execution latency.
+* **Strict Type Safety**: Outlines data contracts (`types/vision.ts`) defining video feeds, inference responses, and bounding box states.
+
+# What Makes This Project Different
+`VisionAgent` is designed to run completely asynchronously. The client-side hook captures camera inputs without blocking the main browser thread, and frames are dispatched in a non-blocking queue. The codebase is pre-configured with modular services, allowing developer-level configuration of models, API keys, and frame capture rates.
+
+# System Architecture
+```mermaid
+graph TD
+    UserCam[Webcam Media Stream] --> |Raw Frames| useCamera[useCamera Hook]
+    useCamera --> |Render & Sample| Canvas[HTML5 Canvas]
+    Canvas --> |Base64 Payload| visionService[visionService API]
+    visionService --> |HTT
+
+--- README (CV INTEGRATED BOT\project\README.md) ---
+# 🎯 Real-Time Object Recognition Web Application
+
+A cutting-edge web application that uses your camera to capture images and identify objects in real-time using Groq's powerful AI vision models.
+
+## ✨ Features
+
+### 🎥 Advanced Camera Integration
+- **Live Video Feed**: Real-time camera access with professional controls
+- **High-Quality Capture**: Optimized image capture from video stream
+- **Mobile Support**: Works seamlessly on desktop and mobile devices
+- **Error Handling**: Graceful fallbacks for camera access issues
+
+### 🧠 AI-Powered Object Detection
+- **Groq Vision API**: Lightning-fast object recognition using Groq's vision models
+- **Real-Time Analysis**: Instant object detection and classification
+- **Confidence Scoring**: Each detection includes accuracy confidence levels
+- **Detailed Descriptions**: AI provides context and descriptions for detected objects
+
+### 🎨 Beautiful Modern Interface
+- **Responsive Design**: Optimized for all screen sizes
+- **Gradient Aesthetics**: Premium visual design with smooth animations
+- **Real-Time Status**: Live indicators and processing feedback
+- **Interactive Results**: Expandable results panel with detailed information
+
+### ⚡ Technical Excellence
+- **TypeScript**: Full type safety throughout the application
+- **React Hooks**: Modern React patterns with custom hooks
+- **Supabase Edge Functions**: Serverless backend for AI processing
+- **Tailwind CSS**: Utility-first styling for rapid development
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ installed
+- A Supabase account
+- A Groq API key
+
+### 1. Get Your API Keys
+
+#### Groq API Key
+1. Visit [Groq Console](https://console.groq.com/)
+2. Sign up or log in to your account
+3. Navigate to API Keys section
+4. Create a new API key
+5. Copy your API key
+
+#### Supabase Setup
+1. Go to [Supabase](https://supabase.com/)
+2. Create a new project
+3. Get your project URL and anon key from Settings > API
+
+### 2. Configure Environment Variables
+
+Update the `.env` file with your credential
+
+==== PROJECT: ECHOSOUL ====
+Path: ECHOSOUL
+Technologies: JavaScript, CSS, HTML
+Total Files: 19
+Sample Files: .env, .gitignore, dbservice.js, package-lock.json, package.json, README.md, server.js, supabase.js, test-groq.js, test1.js, data\characters.json, public\about.html, public\admin.html, public\chat.html, public\dashboard.html, public\index.html, public\login.html, public\register.html, public\css\style.css
+--- README (ECHOSOUL\README.md) ---
+# EchoSoul - Full-Stack Generative AI Companion Platform
+
+A high-performance backend and relational database platform orchestrating persistent, context-aware character dialogues using Supabase and Groq.
+
+# Overview
+Building conversational companions with LLMs requires managing session history, persistent memories, and custom character prompt templates. Simple APIs lose state, leading to disjointed agent conversations. `EchoSoul` introduces a full-stack architecture using Node/Express, Supabase, and the Groq SDK. By mapping user sessions, character definitions, and message histories to PostgreSQL, the system provides persistent, low-latency, context-aware dialogues.
+
+# Core Engineering Highlights
+* **Persistent Session Orchestration**: Bridges Node.js Express routers with Supabase client wrappers, managing active chat states.
+* **Relational Message Schema**: Implements structured tables (`chats` and `messages`) to log user-agent interactions for conversational retrieval.
+* **Groq API Integrations**: Interfaces with Groq completions endpoint, passing system prompts and message histories to models.
+* **Security & Authentication Layer**: Deploys server-side token validation using JWT and password hashing via bcryptjs.
+
+# What Makes This Project Different
+`EchoSoul` separates character data (`characters.json`) from the core state engine, allowing developers to register new companion personas without restarting services. It compiles chat history dynamically on every request, formatting conversation logs into OpenAI-compatible message lists, preventing model drift while maintaining low API latencies.
+
+# System Architecture
+```mermaid
+graph TD
+    Client[Web Interface] --> |JWT Auth Request| Express[Express Server]
+    Express --> |Authenticate| Supabase[(Supabase PostgreSQL)]
+    Express --> |Fetch History & Prompts| dbservice[DB Service]
+    dbservice --> |Retrieve History| Supabase
+    Express --> |Construct Prompt payload| GroqAPI[Groq Inference API]
+    GroqAPI --> |Te
+
+==== PROJECT: EEKSHI PROJECT ====
+Path: EEKSHI PROJECT
+Technologies: Python, C/C++
+Total Files: 373
+Sample Files: .gitignore, myhdl-0.9.0.tar.gz, project code.txt, README.md, myhdl-0.9.0\CHANGES.txt, myhdl-0.9.0\LICENSE.txt, myhdl-0.9.0\Makefile, myhdl-0.9.0\MANIFEST.in, myhdl-0.9.0\PKG-INFO, myhdl-0.9.0\setup.cfg, myhdl-0.9.0\setup.py, myhdl-0.9.0\cosimulation\cver\myhdl_vpi.c, myhdl-0.9.0\cosimulation\cver\README.txt, myhdl-0.9.0\cosimulation\cver\test\bin2gray.py, myhdl-0.9.0\cosimulation\cver\test\dff.py, myhdl-0.9.0\cosimulation\cver\test\dff_clkout.py, myhdl-0.9.0\cosimulation\cver\test\inc.py, myhdl-0.9.0\cosimulation\cver\test\test_all.py, myhdl-0.9.0\cosimulation\icarus\Makefile, myhdl-0.9.0\cosimulation\icarus\myhdl.c
+--- README (EEKSHI PROJECT\README.md) ---
+# HDL-PID - Digital PID Controller Model & Simulation
+
+Hardware-software co-design of a digital dual-wheel PID controller designed in Verilog and simulated in Python using MyHDL.
+
+# Overview
+Testing hardware designs (like PID controllers) on physical FPGAs or microcontrollers makes debugging complex feedback loops slow and difficult. `HDL-PID` implements a co-design system. The core controller is written in synthesis-ready Verilog (`pid_dualwheel.v`), while the simulation, validation, and testbench generation are managed in Python using `MyHDL`. This allows engineers to run high-speed hardware-level simulations, verify signals, and generate VCD wave outputs before deployment.
+
+# Core Engineering Highlights
+* **Synthesis-Ready Verilog Core**: Defines a parameterized, dual-wheel PID controller using signed 16-bit target inputs and PWM outputs.
+* **MyHDL Simulation Framework**: Models digital logic, clock generation, and stimulus blocks in Python, compiling them to target waveforms.
+* **VCD Waveform Export**: Generates Value Change Dump (VCD) logs from simulations, enabling visual signal analysis in GTKWave.
+* **Co-Simulation Testbenches**: Provides testbench scripts (`tb_pid`) verifying PWM outputs across varying speed targets.
+
+# What Makes This Project Different
+`HDL-PID` bridges the gap between software programming and hardware design. Instead of using complex hardware description environments, it uses Python (`MyHDL`) as a simulation compiler. This enables rapid, script-driven hardware testing, allowing developers to write test suites and verify PID algorithms under varying inputs.
+
+# System Architecture
+```mermaid
+graph TD
+    PythonSuite[Python Test Script] --> |Simulation Logic| MyHDL[MyHDL Engine]
+    MyHDL --> |Generate Waves| VCD[VCD Waveform File]
+    VerilogCore[Verilog Core pid_dualwheel.v] --> |Instantiated in| Testbench[Verilog Testbench tb_pid]
+    Testbench --> |Run in Simulator| VCD
+    VCD --> |Analyze| GTKWave[GTKWave Viewer]
+```
+* **Hardware Core*
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\cosimulation\cver\README.txt) ---
+MyHDL co-simulation relies on Unix-style interprocess communication.
+To run co-simulation on Windows, compile and use all tools involved
+(including Python itself) on a Unix-like environment for Windows, such
+as cygwin.
+
+For co-simulation with cver, the following is required:
+  * a working cver installation
+  * a 'myhdl_vpi.so' file, generated from 'myhdl_vpi.c'
+
+For Linux, a makefile 'makefile.lnx' is provided to generate 'myhdl_vpi.so'. 
+However, you will have to edit the makefile to point to the correct
+pli include files for cver. See the makefile for instructions.
+
+To test whether it works, go to the 'test' subdirectory and run the
+tests with 'python test_all.py'. 
+
+For co-simulation with MyHDL, 'cver' should be run with the 'myhdl_vpi.so'
+PLI module, using the '+loadvpi' option, and with the 'vpi_compat_bootstrap'
+routine as the bootstrap routine. The Verilog code should contain the 
+appropriate calls to the '$to_myhdl' and 'from_myhdl' tasks.
+
+The 'myhdl_vpi.c' module was developed and verified with cver version
+GPLCVER_1.10f on Linux.
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\cosimulation\icarus\README.txt) ---
+MyHDL co-simulation relies on Unix-style interprocess communication.
+To run co-simulation on Windows, compile and use all tools involved
+(including Python itself) on a Unix-like environment for Windows, such
+as cygwin.
+
+For co-simulation with Icarus, a working Icarus installation is required,
+so that the commands 'iverilog' and 'vvp' are available.
+
+Run the Makefile by typing 'make'. This should generate a 'myhdl.vpi'
+PLI module. Install it in an appropriate location, where 'vvp' can
+find it. Note that you can use the '-m' flag to vvp to specify the PLI
+module path.
+
+To test whether it works, go to the 'test' subdirectory and run the
+tests with 'python test_all.py'.
+
+For co-simulation with MyHDL, 'vvp' should be run with the 'myhdl.vpi'
+PLI module, and the Verilog code should contain the appropriate calls
+to the '$to_myhdl' and 'from_myhdl' tasks.
+
+The 'myhdl.vpi' module was developed and verified with Icarus 0.7.
+
+Between snapshot 20030518 (used in MyHDL 0.3), and 20031009, the
+Icarus scheduler has been improved. This requires a small update of
+myhdl.c. The current version is supposed to work with recent snapshots
+- the older version is available in myhdl_20030518.c
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\example\arith_lib\README.txt) ---
+The examples in this directory are based on VHDL code from the
+"arith_lib" library, Version 1.0, written by Reto Zimmerman, who holds
+the copyright for the original code. The project web page is at
+<http://www.iis.ee.ethz.ch/~zimmi/arith_lib.html>.
+
+I translated a few modules into myhdl/Python and added testbenches to
+verify and demonstrate myhdl modeling, as well as Python's unit test
+framework. The arith_lib library is useful for these purposes as it
+contains a (simple) behavioral architecture as well as a (sometimes
+complex) structural architecture for each module.
+
+The testbenches are the files called test_<Name>.py. Run them as
+follows:
+
+    python test_<Name>.py
+
+
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\example\cookbook\README.txt) ---
+This directory contains the code for the examples from the MyHDL
+Cookbook. The Cookbook itself is here:
+
+  http://myhdl.jandecaluwe.com/doku.php/cookbook:intro
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\example\rs232\README.txt) ---
+The examples in this directory are based on code from the book
+"Writing Testbenches", 1st edition, by Janick Bergeron.
+
+Files rs232_rx.py and rs232_tx.py contain my translations into
+myhdl/Python of Sample 5-48 and 5-57 in the book. The copyright of the
+original Samples is held by Janick Bergeron.
+
+I added a test bench, test_rs232.py, to verify the translation into
+myhdl/Python, and to demonstrate some possibilities of myhdl and the
+Python unit test framework. Run the test bench as follows:
+
+    python test_rs232.py
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\myhdl\test\README.txt) ---
+Welcome to the MyHDL test directory tree.
+
+This directory contains a number of subdirectories, that contain tests
+for various aspects of MyHDL.
+
+  * core - the MyHDL modeling core tests
+  * conversion - tests related to conversion from MyHDL to Verilog/VHDL
+  * bugs - tests for specific bugs that were reported and solved
+
+All test directories contain a Makefile for easy testing. However,
+there may be additional dependencies and requirements. Some tests
+require a working installation for the Verilog simulators cver or
+Icarus, or the VHDL simulator GHDL. In addition, some tests require a
+that co-simulation is properly set up.
+
+Moreover, some test dirs use the py.test unit testing framework
+instead of the standard Python unittest library.
+
+Please consult the README.txt file in each subdirectory for
+instructions.
+
+Note however that the core tests can be run with stock Python and
+stock MyHDL without any additional requirements. Whenever you make a
+code change, these are the first tests that you want to run to make
+sure nothing is broken.
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\myhdl\test\bugs\README.txt) ---
+Requirements:
+  * cver, icarus, GHDL or vlog/vcom (default)
+  * py.test
+
+See the Makefile - it contains targets per simulator. 
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\myhdl\test\conversion\general\README.txt) ---
+Conversion tests that should work with both VHDL and Verilog
+------------------------------------------------------------
+
+Requirements:
+  * cver, icarus, GHDL, or vcom/vlog (default)
+  * py.test
+
+See the Makefile - it contains targets per simulator. 
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\myhdl\test\conversion\toVerilog\README.txt) ---
+Original tests for conversion to Verilog
+----------------------------------------
+
+Requirements:
+  * cver or icarus 
+  * co-simulation with the target simulator enabled  
+
+icarus is setup by default. You can change that by going into util.py
+and using the cver definitions for the functions setupCosimulation
+and verilogCompile.
+
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\myhdl\test\conversion\toVerilog2\README.txt) ---
+Verilog-specific conversion tests
+---------------------------------
+
+Requirements:
+  * cver, icarus or vlog (default)
+  * py.test
+
+See the Makefile - it contains targets per simulator. 
+
+
+--- README (EEKSHI PROJECT\myhdl-0.9.0\myhdl\test\conversion\toVHDL\README.txt) ---
+VHDL-specific conversion tests
+------------------------------
+
+Requirements:
+  * GHDL or vcom (default)
+  * py.test
+
+
+
+==== PROJECT: ETL-Project-master ====
+Path: ETL-Project-master
+Technologies: HTML, Jupyter Notebook
+Total Files: 37
+Sample Files: .gitignore, ERD.png, LICENSE, README.md, schema.sql, Data Branch\confirmed_clean_df.csv, Data Branch\deaths_clean_df.csv, Data Branch\recovered_clean_df.csv, Data Branch\time_series_covid19_confirmed_global.csv, Data Branch\time_series_covid19_deaths_global.csv, Data Branch\time_series_covid19_recovered_global.csv, Images\high_recoveries.png, Images\most_confirmed.png, Images\most_death.png, Images\total_recovered.png, Part-01-Extract\Extract.ipynb, Part-01-Extract\Raw Data\index.html, Part-01-Extract\Raw Data\time_series_covid19_confirmed_global.csv, Part-01-Extract\Raw Data\time_series_covid19_deaths_global.csv, Part-01-Extract\Raw Data\time_series_covid19_recovered_global.csv
+--- README (ETL-Project-master\README.md) ---
+# CovidETL - Global Time Series Data Pipeline
+
+A modular, multi-stage ETL (Extract, Transform, Load) pipeline cleaning and normalising global COVID-19 timeseries data into a PostgreSQL warehouse.
+
+# Overview
+Unprocessed epidemiologic timeseries data is notoriously noisy, inconsistent, and fragmented across disparate global repositories. `CovidETL` implements a clean data engineering pipeline that automates the extraction of global COVID-19 datasets, executes relational data cleaning routines in Pandas, and loads the structured data into a PostgreSQL data warehouse, establishing an analytics-ready database.
+
+# Core Engineering Highlights
+* **Multi-Phase Pipeline Design**: Separates execution stages into dedicated Jupyter notebooks: `Extract.ipynb`, `Transform.ipynb`, and `Load.ipynb`.
+* **Pandas Transformation Layer**: Standardizes schema columns, replaces null values, aggregates country regions, and converts wide tables into long database formats.
+* **PostgreSQL Schema Mapping**: Defines relational constraints, foreign keys, and primary indices (`schema.sql`) to guarantee data integrity.
+* **Exploratory Data Visualizations**: Generates analysis plots (e.g. confirmed cases, recovered rates, and death distributions).
+
+# What Makes This Project Different
+`CovidETL` does not simply copy files. It transforms wide-format timeseries files into database-ready tables. It maps out an Entity-Relationship Diagram (ERD) defining relational connections, and enforces clean database ingestion rules to prevent data duplication.
+
+# System Architecture
+```mermaid
+graph TD
+    Sources[Global Data Sources] --> |Extract| Part1[Part-01-Extract]
+    Part1 --> |Raw CSV Files| Part2[Part-02-Transform]
+    Part2 --> |Pandas Cleansing & Normalization| Part3[Part-03-Load]
+    Part3 --> |Insert Transactions| Postgres[(PostgreSQL Database)]
+```
+* **Extraction Stage**: Downloads timeseries files for confirmed cases, recoveries, and deaths.
+* **Transformation Stage**: Processes data using Pandas to
+
+==== PROJECT: HACKATHON DATA ====
+Path: HACKATHON DATA
+Technologies: Python
+Total Files: 5
+Sample Files: .gitignore, DATA.PY, indian_locations.csv, indian_stations.json, README.md
+--- README (HACKATHON DATA\README.md) ---
+# AQI Scraper - Air Quality Data Harvester
+
+An API-driven data harvesting system collecting real-time air quality metrics (PM2.5, PM10) from environmental monitoring stations across India.
+
+# Overview
+Environmental analytics pipelines require reliable, real-time data feeds, but public API portals are often rate-limited, fail frequently, or return inconsistent telemetry. `AQI Scraper` is a data harvesting pipeline designed to query the OpenAQ API, retrieve measurements across multiple Indian monitoring stations, parse API responses, and compile them into structured datasets, demonstrating data collection engineering.
+
+# Core Engineering Highlights
+* **Automated Station Iteration**: Parses a local index (`indian_stations.json`) containing metadata for all Indian monitoring stations.
+* **API Rate-Limit Handling**: Employs non-blocking exception handling to skip failed stations, preventing script crashes during API outages.
+* **Structured Data Exporting**: Transforms API response payloads into a single, structured dataset (`indian_measurements.json`).
+* **Environment Configuration**: Employs API authentication keys mapped via dynamic request headers.
+
+# What Makes This Project Different
+`AQI Scraper` is built for operational reliability. By reading from a structured list of station IDs, it isolates API failures to specific locations, allowing the scraper to continue processing the rest of the queue. The resulting JSON dataset maps out clean station locations, measurements, and timestamps.
+
+# System Architecture
+```mermaid
+graph TD
+    StationList[indian_stations.json] --> |Parse IDs| Scraper[Scraper Script DATA.PY]
+    Scraper --> |API Request with Auth| OpenAQ[OpenAQ API]
+    OpenAQ --> |JSON Telemetry Payload| Scraper
+    Scraper --> |Exception Handling / Skip| Logger[Console Log]
+    Scraper --> |Aggregate and Compile| Measurements[indian_measurements.json]
+```
+* **Station Registry**: JSON file indexing Indian environmental monitoring locations.
+* **Harvester Engine*
+
+==== PROJECT: IIT M PROJECTS ====
+Path: IIT M PROJECTS
+Technologies: Jupyter Notebook
+Total Files: 19
+Sample Files: .gitignore, README.md, MAD-1\23f3003224\example.txt, MAD-1\23f3003224\README.md, MLP-KAGGLE\24f2008757(1).ipynb, MLP-KAGGLE\submission_23F3003224.csv, MLP-KAGGLE\ASSIGNMENT_1\DESCRIPTION.TXT, MLP-KAGGLE\ASSIGNMENT_1\IMPROVED_CELLS.txt, MLP-KAGGLE\ASSIGNMENT_1\kaggle_best_notebook.ipynb, MLP-KAGGLE\ASSIGNMENT_1\kaggle_cells_part1.txt, MLP-KAGGLE\ASSIGNMENT_1\kaggle_cells_part2.txt, MLP-KAGGLE\ASSIGNMENT_1\kaggle_cells_part3.txt, MLP-KAGGLE\ASSIGNMENT_1\kaggle_cells_part4.txt, MLP-KAGGLE\ASSIGNMENT_1\mlp-term-1-2026-kaggle-assignment-1.zip, MLP-KAGGLE\ASSIGNMENT_1\sample_submission.csv, MLP-KAGGLE\ASSIGNMENT_1\T1_2026 Kaggle Assignments.pdf, MLP-KAGGLE\ASSIGNMENT_1\taxi_fare_prediction.ipynb, MLP-KAGGLE\ASSIGNMENT_1\test.csv, MLP-KAGGLE\ASSIGNMENT_1\train.csv
+--- README (IIT M PROJECTS\README.md) ---
+# TaxiFarePredictor - Tabular ML forecasting Pipeline
+
+An end-to-end machine learning regression and forecasting pipeline predicting taxi fare values using tree-based classifiers (XGBoost, LightGBM) and hyperparameter tuning.
+
+# Overview
+Predicting urban transit pricing requires modeling complex spatio-temporal dependencies, weather indicators, and historical passenger demands. Linear models fail to capture non-linear traffic hotspots and peak-hour multipliers. `TaxiFarePredictor` establishes a structured machine learning pipeline that ingests raw tabular transit records, engineers spatial features (haversine distances, coordinates clustering), and trains optimized gradient boosting models (XGBoost, RandomForest) to forecast travel costs, targeting Kaggle-level performance.
+
+# Core Engineering Highlights
+* **Advanced Feature Engineering**: Computes Haversine distance vectors, directional bearings, and coordinate bin clusters from raw latitude/longitude points.
+* **DateTime Deconstruction**: Deconstructs timestamps into cyclically encoded parameters (hour of day, day of week, month) to capture temporal traffic patterns.
+* **Gradient Boosting Regressors**: Integrates tree-based regression models (XGBoost, LightGBM) to handle high-cardinality data fields.
+* **Automated Parameter Tuning**: Employs GridSearchCV workflows to optimize learning rates, maximum tree depths, and estimator weights.
+
+# What Makes This Project Different
+`TaxiFarePredictor` addresses outlier filtering and coordinate validation directly in the preprocessing layer. It handles bad sensor inputs (coordinates outside geographical bounds) and computes direct geodesic distances. The feature selection pipeline scales to millions of rows, avoiding memory overflows by converting feature datatypes to compact formats (e.g. float32, int8).
+
+# System Architecture
+```mermaid
+graph TD
+    Raw[Raw Trip Data] --> |Outlier Filter| Clean[Cleaned Data]
+    Clean --> |Spatial Transforms| GeoFeatures[Geodesic & bearing 
+
+--- README (IIT M PROJECTS\MAD-1\23f3003224\README.md) ---
+# 23f3003224
+
+==== PROJECT: KAGGLE ====
+Path: KAGGLE
+Technologies: HTML, Python, CSS
+Total Files: 203
+Sample Files: .gitignore, 3️⃣ EXPORT TO SHAPEFILE (VECTOR).py, Kaggle Notebook Editor.html, ndvi_output.tif, python.py, README.md, THRESHOLDING NDVI.py, visualisethe nvdi.py, Kaggle Notebook Editor_files\api.js.download, Kaggle Notebook Editor_files\app.css, Kaggle Notebook Editor_files\app.js.download, Kaggle Notebook Editor_files\bundle.js.download, Kaggle Notebook Editor_files\cb=gapi.loaded_0, Kaggle Notebook Editor_files\client, Kaggle Notebook Editor_files\css, Kaggle Notebook Editor_files\css2, Kaggle Notebook Editor_files\css2(1), Kaggle Notebook Editor_files\dataset-thumbnail.png, Kaggle Notebook Editor_files\index.css, Kaggle Notebook Editor_files\journal_empty_state.svg
+--- README (KAGGLE\README.md) ---
+# NDVI Geospatial Remote Sensing Analyzer
+
+Geospatial image processing and remote sensing tool computing Normalized Difference Vegetation Index (NDVI) and exporting vector shapefiles.
+
+# Overview
+Analyzing satellite imagery for environmental changes requires processing multi-spectral raster bands. Traditional GIS software is heavy, expensive, and difficult to automate in data pipelines. `NDVI Geospatial Analyzer` provides a lightweight, script-driven tool that imports spatial raster bands (Red and Near-Infrared), computes normalized vegetation indices, runs threshold segmentation, and converts the resulting raster segments into vector shapefile polygons, enabling automated environmental monitoring.
+
+# Core Engineering Highlights
+* **Raster Calculations (NDVI)**: Performs array-based computations over Red and Near-Infrared bands to isolate chlorophyll reflections.
+* **Vector Polygonization**: Converts threshold-segmented raster grids into vector coordinate shapefiles (SHP) for GIS integration.
+* **Spatial Thresholding**: Employs adaptive image thresholding to segment healthy vegetation regions from bare ground.
+* **GIS Schema Preservation**: Retains projection and coordinate reference systems (CRS) across raster-to-vector operations.
+
+# What Makes This Project Different
+The toolkit automates the manual GIS drawing process. By combining array processing (NumPy) with geospatial vector boundaries, it transforms pixel-level classifications into geographic shape polygons. This allows engineers to import generated vectors directly into tools like QGIS or ArcGIS without manual digitization.
+
+# System Architecture
+```mermaid
+graph TD
+    Raster[Multi-Spectral Landsat/Sentinel Imagery] --> |Band Splitting| RedNIR[Red & Near-Infrared Bands]
+    RedNIR --> |Array NDVI Calculation| NDVI[NDVI Raster Float Matrix]
+    NDVI --> |Binary Thresholding| Seg[Segmented Mask]
+    Seg --> |Polygonization| Vector[Vector Polygons]
+    Vector --> |Export Shapefile| SHP[Shapefile .shp + .prj]
+
+
+==== PROJECT: MIROFISH ADVANCED ====
+Path: MIROFISH ADVANCED
+Technologies: Python, JavaScript, CSS, TypeScript, HTML, Docker
+Total Files: 115
+Sample Files: .coverage, .env, .env.example, .gitignore, BUDDHI_BLUEPRINT.md, BUDDHI_SETUP.md, CLAUDE.md, CONTRIBUTING.md, docker-compose.yml, Dockerfile, Dockerfile.training, Dockerfile.transformer, implementation_plan.md.resolved, package-lock.json, QUICKSTART.md, README.md, rename.py, requirements.txt, test_payload.json, verify_keys.py
+--- README (MIROFISH ADVANCED\README.md) ---
+# Buddhi Core - Enterprise RAG & Transformer Orchestrator
+
+An enterprise-grade, asynchronous AI transformer framework deploying FastAPI, async SQLAlchemy database migrations, and cloud-hosted Nvidia instruction models.
+
+# Overview
+Deploying Large Language Models at scale in enterprise environments requires robust asynchronous API gateways, structured database schemas, and clean model routing layers. Simple wrappers fail under heavy parallel request loads. `Buddhi Core` (under the Mirofish Advanced module) is a production-ready RAG and Transformer orchestrator. It manages user requests via FastAPI, processes vector data asynchronously using SQLAlchemy, runs Alembic migrations, and pipelines prompts to cloud-hosted Nvidia models (e.g., Llama-3.3-70b-instruct), providing a scalable backend for corporate knowledge retrieval.
+
+# Core Engineering Highlights
+* **Asynchronous Database Pipeline**: Implements async database queries using SQLAlchemy with `asyncpg` drivers and Alembic migrations.
+* **Model Routing Proxy**: Interfaces with Nvidia API gateways to handle instruction model prompts with automatic retry configurations.
+* **Training and Transformer Containers**: Outlines Docker configurations (`Dockerfile.training` and `Dockerfile.transformer`) to deploy model nodes independently.
+* **Robust Test Coverage**: Deploys a comprehensive testing suite (pytest) monitoring core pipelines, API responses, and database transaction states.
+
+# What Makes This Project Different
+`Buddhi Core` is architected for production-grade operations. It utilizes asynchronous database calls to prevent request blocking, separates training containers from model inference interfaces, and includes verification check systems (`verify_keys.py`). The application schema is built to store document vectors, session audits, and RAG contexts with high data integrity.
+
+# System Architecture
+```mermaid
+graph TD
+    UserClient[Web Dashboard] --> |API request| API[FastAPI Gateway]
+    API --> |Async Transactio
+
+--- README (MIROFISH ADVANCED\.pytest_cache\README.md) ---
+# pytest cache directory #
+
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+
+**Do not** commit this to version control.
+
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
+
+
+==== PROJECT: MY PORTFOLIO ONLINE ====
+Path: MY PORTFOLIO ONLINE
+Technologies: TypeScript, JavaScript, CSS, HTML
+Total Files: 32
+Sample Files: .gitignore, README.md, project\.gitignore, project\eslint.config.js, project\index.html, project\package-lock.json, project\package.json, project\postcss.config.js, project\tailwind.config.js, project\tsconfig.app.json, project\tsconfig.json, project\tsconfig.node.json, project\vite.config.ts, project\.bolt\config.json, project\.bolt\prompt, project\src\App.tsx, project\src\index.css, project\src\main.tsx, project\src\vite-env.d.ts, project\src\components\About.tsx
+--- README (MY PORTFOLIO ONLINE\README.md) ---
+# Portfolio Portal - Personal Professional Index
+
+A modern, type-safe React portfolio website detailing project engineering milestones, synced with a Supabase database backend.
+
+# Overview
+Most developer portfolios are static HTML files that are difficult to update and lack dynamic content structures. `Portfolio Portal` provides a dynamic, database-driven professional dashboard. Built with React, TypeScript, and Vite, it fetches project listings, academic milestones, and experience records from a Supabase PostgreSQL backend, displaying developer credentials dynamically.
+
+# Core Engineering Highlights
+* **Supabase Integration**: Connects with Supabase database clients to query dynamic project records.
+* **Strict Type Safety**: Employs TypeScript across component interfaces, data structures, and database entities.
+* **Modular Tailwind Design**: Uses TailwindCSS for fluid layouts and consistent UI scaling.
+
+# System Architecture
+* **Client Layer**: Responsive React component trees.
+* **Data Layer**: Supabase PostgreSQL database tables mapping projects and experiences.
+
+# Tech Stack & Engineering Rationale
+* **React + Vite** -> Fast compilation, low bundle size, and responsive rendering.
+* **TypeScript** -> Guarantees type stability for database records.
+* **Supabase** -> Dynamic content storage without hosting dedicated database servers.
+
+# Future Expansion
+* **Interactive Project Demos**: Embed live project simulators within card components.
+* **Analytics Tracker**: Log page visits and popular project views using Supabase edge functions.
+
+# Developer Notes
+This portfolio was built to show a modern frontend codebase. Iterative development prioritized clean type definitions and modular Tailwind styling to ensure fast loading times and ease of maintenance.
+
+
+==== PROJECT: MeshChat ====
+Path: MeshChat
+Technologies: 
+Total Files: 45
+Sample Files: .gitignore, build.gradle, gradlew, gradlew.bat, local.properties, README.md, settings.gradle, .gradle\config.properties, .gradle\file-system.probe, .gradle\9.0-milestone-1\gc.properties, .gradle\9.0-milestone-1\checksums\checksums.lock, .gradle\9.0-milestone-1\checksums\md5-checksums.bin, .gradle\9.0-milestone-1\checksums\sha1-checksums.bin, .gradle\9.0-milestone-1\executionHistory\executionHistory.bin, .gradle\9.0-milestone-1\executionHistory\executionHistory.lock, .gradle\9.0-milestone-1\fileChanges\last-build.bin, .gradle\9.0-milestone-1\fileHashes\fileHashes.bin, .gradle\9.0-milestone-1\fileHashes\fileHashes.lock, .gradle\buildOutputCleanup\buildOutputCleanup.lock, .gradle\buildOutputCleanup\cache.properties
+--- README (MeshChat\README.md) ---
+# MeshChat - Decentralized P2P Android Messenger
+
+A decentralized, end-to-end encrypted local peer-to-peer (P2P) messaging application for Android using Bluetooth LE/Classic connections and local Room SQLite databases.
+
+# Overview
+Centralized communication networks fail during natural disasters, in remote locations, or under strict network blockades. Standard messaging apps require internet or cellular base stations. `MeshChat` addresses this by establishing a decentralized, local-only P2P communication network. Built natively for Android using Kotlin, it utilizes Bluetooth Classic and Low Energy (BLE) to advertise, discover, and route messages across peer devices. By combining mesh routing algorithms with end-to-end encryption, it provides secure communication without internet connectivity.
+
+# Core Engineering Highlights
+* **Bluetooth Mesh Controller**: Manages local RFCOMM channel loops, BLE advertisements, and background socket listening threads.
+* **End-to-End Encryption (E2EE)**: Implements cryptographic key exchanges and message encrypt/decrypt pipelines using custom Key and Crypto managers.
+* **Room SQL Database**: Uses Room library to log local message histories and peer device mappings with ACID compliance.
+* **Android Service Integration**: Implements a persistent background service (`BluetoothMeshService`) to maintain network connections when the UI is inactive.
+* **Interactive UI Views**: Multi-activity layouts managing peer lists, chat screens, and connection states.
+
+# What Makes This Project Different
+`MeshChat` operates without centralized servers. It implements a P2P routing protocol: when a node receives a message, it verifies the recipient key and propagates the packet across adjacent peers if needed. The local storage handles message states (sent, received, read) offline, and automatically synchronizes history when devices reconnect.
+
+# System Architecture
+```mermaid
+graph TD
+    UI[Chat / Peer Activities] --> |Message Actions| Service[Bluetooth 
+

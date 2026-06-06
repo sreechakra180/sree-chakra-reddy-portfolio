@@ -1,0 +1,702 @@
+{
+  "projects": [
+    {
+      "name": ".git",
+      "path": "d:/all projects\\.git",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "1d549ffbb26fec844bb3f1cb2649f18d6450ea18a740e3146495ec90d8dbbf83"
+    },
+    {
+      "name": "1",
+      "path": "d:/all projects\\1",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 21,
+      "category": "BAD",
+      "hash": "48a693ab30b7a540db8ed306c4abefb2fcdd2474cdc0acc630aff908e62b5b03"
+    },
+    {
+      "name": "2nd brain",
+      "path": "d:/all projects\\2nd brain",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "f81271b040582d3e4c3abe4d0744643691c799d5aeb1d8244ec6d9a9b81ef559"
+    },
+    {
+      "name": "AI",
+      "path": "d:/all projects\\AI",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 20,
+      "category": "BAD",
+      "hash": "a33bdabf17552d9674811979998c65c3e53437ff5ad693a023a1a941c26f1e48"
+    },
+    {
+      "name": "automated os",
+      "path": "d:/all projects\\automated os",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 53,
+      "category": "NORMAL",
+      "hash": "b74758ce53e334effb028a62edfc4220a225286e134149449d8517dc882d9f03"
+    },
+    {
+      "name": "automation system",
+      "path": "d:/all projects\\automation system",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "695680dfa2df71ffd7d316fc84cda66fec69a631b78fc3419cbf00650751da78"
+    },
+    {
+      "name": "ayanakoji face replacing",
+      "path": "d:/all projects\\ayanakoji face replacing",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 43,
+      "category": "NORMAL",
+      "hash": "87c72b5498cd92f94566ce22dfb9f63d35dfc0b4fa40d44fe8c3cb427a7cffb7"
+    },
+    {
+      "name": "BBC classification",
+      "path": "d:/all projects\\BBC classification",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 21,
+      "category": "BAD",
+      "hash": "90e48424488119344b61c63a55914cc9c7a6bea860895ff2a981e96a53d77a7d"
+    },
+    {
+      "name": "BDM PROJ",
+      "path": "d:/all projects\\BDM PROJ",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 40,
+      "category": "NORMAL",
+      "hash": "e38bcec4d3141a3d73950f7cd1ff3aebfeb8bfe437907bcbadf3b5369383a37b"
+    },
+    {
+      "name": "calyco",
+      "path": "d:/all projects\\calyco",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 20,
+      "category": "BAD",
+      "hash": "4d0f10ad855a81ed5756e4bdce4d856816fe5b66f0cabaf25c41cfd558c6daae"
+    },
+    {
+      "name": "chatbot",
+      "path": "d:/all projects\\chatbot",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "99ea7faac8feb6f8d5aaca0b7e9f8c8f69333b017d518eb2e71c8ad8a1bd5778"
+    },
+    {
+      "name": "cnn face recogniasaiton",
+      "path": "d:/all projects\\cnn face recogniasaiton",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 49,
+      "category": "NORMAL",
+      "hash": "7114273149370a4310ec2673d8132f50d0840f97815fe7204467e96777515ff2"
+    },
+    {
+      "name": "codevita",
+      "path": "d:/all projects\\codevita",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 21,
+      "category": "BAD",
+      "hash": "c1dd7578fd96fd84a4ec014a8d9aec5d8195c0cfb8a4ba8501f9c74e913d062a"
+    },
+    {
+      "name": "company-diary-mvp",
+      "path": "d:/all projects\\company-diary-mvp",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "aff288c78145023f613c21572e0b00deedb0ba90cff16c1cf6fdd7b9a5d091be"
+    },
+    {
+      "name": "CV INTEGRATED BOT",
+      "path": "d:/all projects\\CV INTEGRATED BOT",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "7b50ae992b715eae675292c3ebe909586f728f6ee2e330cdc2bbda7498fa4c77"
+    },
+    {
+      "name": "dragon",
+      "path": "d:/all projects\\dragon",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "General",
+      "score": 28,
+      "category": "BAD",
+      "hash": "543cc0db1f2bbefec42844f9061d0b31526542d08496ea1c7855888145a87639"
+    },
+    {
+      "name": "ECHOSOUL",
+      "path": "d:/all projects\\ECHOSOUL",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "General",
+      "score": 90,
+      "category": "GOATED",
+      "hash": "03c4e6babd672fe48480cb2d75f2164d1f507aaba2f53c9aac65df70da92450a"
+    },
+    {
+      "name": "EEKSHI PROJECT",
+      "path": "d:/all projects\\EEKSHI PROJECT",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "67462c7c30a0fe7310efebb7864753dfd0a97539a8565a00a4db7c49729e8982"
+    },
+    {
+      "name": "emopet",
+      "path": "d:/all projects\\emopet",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "3feef883943a4db0b0654d9c318adb13c9632fcf0264dc2589fcba748cd9fca5"
+    },
+    {
+      "name": "ETL-Project-master",
+      "path": "d:/all projects\\ETL-Project-master",
+      "language": "Jupyter Notebook",
+      "framework": "None",
+      "purpose": "ETL",
+      "score": 20,
+      "category": "BAD",
+      "hash": "79052619d0705b6b6c2277ef723434b15a2534655e2bd3d74b705c1d9581e295"
+    },
+    {
+      "name": "failed projects",
+      "path": "d:/all projects\\failed projects",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "bf61124b1a48936ae278348a3de98a87890354dfec19de493ab2522e28573371"
+    },
+    {
+      "name": "github",
+      "path": "d:/all projects\\github",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "HACKATHON DATA",
+      "path": "d:/all projects\\HACKATHON DATA",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "4ddd2b8fb1d4ccf8d832fbd149aba303e5092fcd912d91bda3923519deafbc8a"
+    },
+    {
+      "name": "hackathon IIT M x odoo",
+      "path": "d:/all projects\\hackathon IIT M x odoo",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "4120663547bb0512df8e490dfc214caa47481e3a35086aa9384f04fcfac862c2"
+    },
+    {
+      "name": "html",
+      "path": "d:/all projects\\html",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "7f2bd8f10b86380a3efd5e0676432f15617b342a4b9b4bb868c2a7c92847d20d"
+    },
+    {
+      "name": "idk",
+      "path": "d:/all projects\\idk",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "9cf73fec4d02fd7f76e3721864aab3589ede71e813a61257bc7af336a81f2f7f"
+    },
+    {
+      "name": "IIT M PROJECTS",
+      "path": "d:/all projects\\IIT M PROJECTS",
+      "language": "Jupyter Notebook",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "4d8b76606720522b1874e0de09b45f98e397bf1c325273f641b0d9cc1306a5ba"
+    },
+    {
+      "name": "incomplete",
+      "path": "d:/all projects\\incomplete",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "f42510c4e533ae01a573ba278cc1dc2f4f0a6d2b3f527729dea0a39f61888607"
+    },
+    {
+      "name": "intenal mpmc",
+      "path": "d:/all projects\\intenal mpmc",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "intership",
+      "path": "d:/all projects\\intership",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 90,
+      "category": "GOATED",
+      "hash": "ac3e1063b07d6ff34da2d7516aa5c88a1170033fa3085fe9adb03034f7ae462f"
+    },
+    {
+      "name": "jarvis",
+      "path": "d:/all projects\\jarvis",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 54,
+      "category": "NORMAL",
+      "hash": "b23b0e7d290dc69b24bcdb75d0be950fc39d28e2bfeb5432e10a2e195ab6ca1f"
+    },
+    {
+      "name": "jarvis  new",
+      "path": "d:/all projects\\jarvis  new",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "ea71e66342c2f799e2fca4be5175ab2863806430298452cefc8a861844e59dd5"
+    },
+    {
+      "name": "KAGGLE",
+      "path": "d:/all projects\\KAGGLE",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 24,
+      "category": "BAD",
+      "hash": "189866d50ebce23470fe4bb58f4f2738b8ad30a788258215c51c44f24bc90b04"
+    },
+    {
+      "name": "mad 1 project IIT M",
+      "path": "d:/all projects\\mad 1 project IIT M",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 3,
+      "category": "BAD",
+      "hash": "bf3483fbd4838cdf38d1bc2136c2a61145712fb880e5fc5464d424a669e8f095"
+    },
+    {
+      "name": "MeshChat",
+      "path": "d:/all projects\\MeshChat",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "ad6d05ef5b27937edf50f6ae22bce39483a8a94527f17841f8c1b9eab66438bb"
+    },
+    {
+      "name": "MeshChat_Full",
+      "path": "d:/all projects\\MeshChat_Full",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "d5624741ed8335f0a591e0a6364a45107a65bdbfd07bc77c067c178c5391dd63"
+    },
+    {
+      "name": "MIROFISH ADVANCED",
+      "path": "d:/all projects\\MIROFISH ADVANCED",
+      "language": "Python",
+      "framework": "FastAPI",
+      "purpose": "Quant",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "b892d3538688a41960d95f2816c51cb823c6df98d43460c52aee556a8667012f"
+    },
+    {
+      "name": "mirofish next level",
+      "path": "d:/all projects\\mirofish next level",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "0f119b0a7a5b096d24e5aa528e753eb3650e06720a25c10659693286d1da2475"
+    },
+    {
+      "name": "my portfolio",
+      "path": "d:/all projects\\my portfolio",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "e7f09cb61e880f82c8fd85e2da5bc9e5a416c96bff1a7c518d0886c48db00eab"
+    },
+    {
+      "name": "MY PORTFOLIO ONLINE",
+      "path": "d:/all projects\\MY PORTFOLIO ONLINE",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "General",
+      "score": 25,
+      "category": "BAD",
+      "hash": "9e884319ec2f8f4481d9001167f282b3a2fa351d12dc9309d8d515670779ae88"
+    },
+    {
+      "name": "my website",
+      "path": "d:/all projects\\my website",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "cf1b7f7cd198d2da5d933efc0427e7c97bed7b08ac34422724ac9722432ef726"
+    },
+    {
+      "name": "N8N",
+      "path": "d:/all projects\\N8N",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "be851e744b12740155649aff4d6a51b70de21edf4b8941239880d0f456494e38"
+    },
+    {
+      "name": "nationsheild",
+      "path": "d:/all projects\\nationsheild",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "AI/ML",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "77a9057028c15730a65a427a9506752d111c237900cc7fa0ab3b85090087cb21"
+    },
+    {
+      "name": "New folder",
+      "path": "d:/all projects\\New folder",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "nuclei",
+      "path": "d:/all projects\\nuclei",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "AI/ML",
+      "score": 0,
+      "category": "BAD",
+      "hash": "fd61f7059d2890ed096c752d93881cfecf895ca135ff3d8a03fcd971dd3c09b9"
+    },
+    {
+      "name": "open source projects",
+      "path": "d:/all projects\\open source projects",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "e57fabedc7471eb6f41c5139f39ab7553db383b4ee475bdbf045a6644aa828dd"
+    },
+    {
+      "name": "portfolio website",
+      "path": "d:/all projects\\portfolio website",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 2,
+      "category": "BAD",
+      "hash": "d66abb4bf44419092f290e006a29e79591a163d9520f0937c3fc16ce827047ec"
+    },
+    {
+      "name": "portfolio_scripts",
+      "path": "d:/all projects\\portfolio_scripts",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 1,
+      "category": "BAD",
+      "hash": "32d8551b028cf7835dd7991f32c7aeb1d33656f2199c5881b2e829e035519576"
+    },
+    {
+      "name": "PRODUCT",
+      "path": "d:/all projects\\PRODUCT",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "PRODUCT1",
+      "path": "d:/all projects\\PRODUCT1",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "fbfeb35c83e5a68762fbbc5cc7e08ea771e218ddcfd3b052bba65e4f3a71fb49"
+    },
+    {
+      "name": "project4",
+      "path": "d:/all projects\\project4",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "Research",
+      "score": 21,
+      "category": "BAD",
+      "hash": "5ec6796e637360c6f3a5d476f3bdc4a8e7e3be9ee195db37bf94a4db0e72c52b"
+    },
+    {
+      "name": "projects",
+      "path": "d:/all projects\\projects",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "8843cc873a58ab682ed131a7b25baab89f7c8d0e2eca92ca0fe3923c8c85e3c3"
+    },
+    {
+      "name": "python",
+      "path": "d:/all projects\\python",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 23,
+      "category": "BAD",
+      "hash": "9f49f1bc51e2c286346e45f8b78928153eda7f85771f005ca823a568a20469dd"
+    },
+    {
+      "name": "quantum",
+      "path": "d:/all projects\\quantum",
+      "language": "C++",
+      "framework": "None",
+      "purpose": "General",
+      "score": 56,
+      "category": "NORMAL",
+      "hash": "67f99cd346a80b21fbdad26c28cc1ba3e048d836191154bbb8a14f2f54409daa"
+    },
+    {
+      "name": "quantum codes",
+      "path": "d:/all projects\\quantum codes",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "8bf0b9d4a38026056abb7edd203fba89aa76f4632c15448f999dc7e025585877"
+    },
+    {
+      "name": "SCREEN AUTOMATION",
+      "path": "d:/all projects\\SCREEN AUTOMATION",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 90,
+      "category": "GOATED",
+      "hash": "943a2512b3f98063050a1b3e1ceb5713a8c749648a9f04f378ad3a8cfe8f286a"
+    },
+    {
+      "name": "SIH",
+      "path": "d:/all projects\\SIH",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "067ad3b2580782278a8271f71bc6498e1c879488b472ab52479b1c400bf99ef4"
+    },
+    {
+      "name": "soul echo",
+      "path": "d:/all projects\\soul echo",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 70,
+      "category": "GOOD",
+      "hash": "cdcef3137d6095215c3442194b0d4a35209b6dbee5954ba75fa29e8146119948"
+    },
+    {
+      "name": "spacex failures systematic analysis",
+      "path": "d:/all projects\\spacex failures systematic analysis",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "AI/ML",
+      "score": 21,
+      "category": "BAD",
+      "hash": "2861ee81fb022020467cfd8bbe2069732101b83aab8f37c40adf4ce5a0619ec6"
+    },
+    {
+      "name": "speech recognisation",
+      "path": "d:/all projects\\speech recognisation",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "fda38d9c9c169d48f3153ab7dace07cd7912ae0d69f575f87e5b2da5f2d64b32"
+    },
+    {
+      "name": "t7_hackathon",
+      "path": "d:/all projects\\t7_hackathon",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "Full-stack",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "c9502c79fda91b0e38a8009fa38a212404ccdc56eb985a088feaf01989681073"
+    },
+    {
+      "name": "TATA INTERSHIP",
+      "path": "d:/all projects\\TATA INTERSHIP",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "01381bff5f68b033320c5fa21c02d2afcbd913460cf61e90f7d7d7d2ca3e2789"
+    },
+    {
+      "name": "team 7",
+      "path": "d:/all projects\\team 7",
+      "language": "Unknown",
+      "framework": "None",
+      "purpose": "General",
+      "score": 0,
+      "category": "BAD",
+      "hash": "5460a20e7926af8ee5a7845f35d642c9cdc5212cefffd2b2c9f509b4d4b3ff9b"
+    },
+    {
+      "name": "titanic classification",
+      "path": "d:/all projects\\titanic classification",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "AI/ML",
+      "score": 1,
+      "category": "BAD",
+      "hash": "c30fd1ee24549dbe29fb74d46b74a13c78d700687d472c0891da7a3e3e791978"
+    },
+    {
+      "name": "TRADING BOT",
+      "path": "d:/all projects\\TRADING BOT",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 16,
+      "category": "BAD",
+      "hash": "8ac2d62a861033c160248cea250097684f56ca6fcf2ff06c2c8b619e6b3c5cd0"
+    },
+    {
+      "name": "UMAX FITNESS APP",
+      "path": "d:/all projects\\UMAX FITNESS APP",
+      "language": "Python",
+      "framework": "None",
+      "purpose": "General",
+      "score": 20,
+      "category": "BAD",
+      "hash": "2b40691aaf3d5e345a92ab0c450718aa9de6bb2be47a53872817882b9dc60ee6"
+    },
+    {
+      "name": "vehicle_parking_app",
+      "path": "d:/all projects\\vehicle_parking_app",
+      "language": "Python",
+      "framework": "Flask",
+      "purpose": "AI/ML",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "c7ff8e947553869564f7ba91aecba23a807a57c452cc8df6be05881228340b7a"
+    },
+    {
+      "name": "voice multi",
+      "path": "d:/all projects\\voice multi",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "Full-stack",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "18ec6f24cac92231115d82b260f20e2f0db06ef163244a3c592074a365580ea1"
+    },
+    {
+      "name": "voice-circle-ai",
+      "path": "d:/all projects\\voice-circle-ai",
+      "language": "JavaScript",
+      "framework": "None",
+      "purpose": "Full-stack",
+      "score": 50,
+      "category": "NORMAL",
+      "hash": "82060948ccd7b69da14017ecf0cf66ac292cfac1786d827880c2801e39080739"
+    }
+  ],
+  "duplicates": {
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": [
+      "github",
+      "intenal mpmc",
+      "New folder",
+      "PRODUCT"
+    ]
+  }
+}

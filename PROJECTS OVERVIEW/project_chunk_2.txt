@@ -1,0 +1,1307 @@
+==== PROJECT: calyco ====
+Path: calyco
+Technologies: 
+Total Files: 4
+Sample Files: .gitignore, Calyco Content Strategy2 (2).pdf, README.md, WhatsApp Chat with +91 99589 66881.zip
+--- README (calyco\README.md) ---
+# Calyco Strategy - Digital Content Proposals
+
+Strategic marketing analysis, content distribution workflows, and operations planning for the Calyco platform.
+
+# Overview
+Developing content strategies for modern digital brands requires structuring distribution channels, analyzing market opportunities, and mapping out content pipelines. `Calyco Strategy` compiles marketing proposals, platform audits, and workflow designs, organizing content calendars and tracking performance metrics.
+
+# Core Engineering Highlights
+* **Content Pipeline Designs**: Structures content creation and publishing workflows across digital channels.
+* **Channel Distribution Strategies**: Audits digital platforms to optimize audience reach.
+* **Operations Frameworks**: Maps out team roles and publishing schedules.
+
+# Tech Stack & Rationale
+* **Analytics Frameworks** -> Auditing campaign metrics and user engagement.
+* **Operations Tools** -> Coordinating content schedules and distribution channels.
+
+# Future Expansion
+* **Dynamic Marketing Dashboard**: Build a dashboard to track real-time campaign performance.
+* **Automated Publishing API**: Implement scripts to schedule and publish posts directly to platforms.
+
+# Developer Notes
+This portfolio analyzes digital content workflows, focusing on building structured distribution schedules to optimize audience engagement.
+
+
+==== PROJECT: cardano hackathon ====
+Path: cardano hackathon
+Technologies: Python, C/C++, Shell, CSS, JavaScript, HTML
+Total Files: 35447
+Sample Files: .gitignore, PROJECT_DESCRIPTION.md, .venv\.gitignore, .venv\pyvenv.cfg, .venv\Lib\site-packages\deprecation.py, .venv\Lib\site-packages\distutils-precedence.pth, .venv\Lib\site-packages\isympy.py, .venv\Lib\site-packages\numpy-2.2.0-cp312-cp312-win_amd64.whl, .venv\Lib\site-packages\pylab.py, .venv\Lib\site-packages\scipy-1.16.3-cp312-cp312-win_amd64.whl, .venv\Lib\site-packages\six.py, .venv\Lib\site-packages\threadpoolctl.py, .venv\Lib\site-packages\typing_extensions.py, .venv\Lib\site-packages\absl\app.py, .venv\Lib\site-packages\absl\app.pyi, .venv\Lib\site-packages\absl\command_name.py, .venv\Lib\site-packages\absl\py.typed, .venv\Lib\site-packages\absl\__init__.py, .venv\Lib\site-packages\absl\flags\argparse_flags.py, .venv\Lib\site-packages\absl\flags\_argument_parser.py
+--- README (cardano hackathon\.venv\Lib\site-packages\matplotlib\mpl-data\fonts\pdfcorefonts\readme.txt) ---
+Font Metrics for the 14 PDF Core Fonts
+======================================
+
+This directory contains font metrics for the 14 PDF Core Fonts,
+downloaded from Adobe. The title and this paragraph were added by
+Matplotlib developers. The download URL was
+<http://partners.adobe.com/public/developer/font/index.html>.
+
+This file and the 14 PostScript(R) AFM files it accompanies may be used, copied, 
+and distributed for any purpose and without charge, with or without modification, 
+provided that all copyright notices are retained; that the AFM files are not 
+distributed without this file; that all modifications to this file or any of 
+the AFM files are prominently noted in the modified file(s); and that this 
+paragraph is not modified. Adobe Systems has no responsibility or obligation 
+to support the use of the AFM files.
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\matplotlib\mpl-data\sample_data\README.txt) ---
+This is the sample data needed for some of matplotlib's examples and
+docs.  See matplotlib.cbook.get_sample_data for more info.
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\numpy\ma\README.rst) ---
+==================================
+A guide to masked arrays in NumPy
+==================================
+
+.. Contents::
+
+See http://www.scipy.org/scipy/numpy/wiki/MaskedArray (dead link)
+for updates of this document.
+
+
+History
+-------
+
+As a regular user of MaskedArray, I (Pierre G.F. Gerard-Marchant) became
+increasingly frustrated with the subclassing of masked arrays (even if
+I can only blame my inexperience). I needed to develop a class of arrays
+that could store some additional information along with numerical values,
+while keeping the possibility for missing data (picture storing a series
+of dates along with measurements, what would later become the `TimeSeries
+Scikit <http://projects.scipy.org/scipy/scikits/wiki/TimeSeries>`__
+(dead link).
+
+I started to implement such a class, but then quickly realized that
+any additional information disappeared when processing these subarrays
+(for example, adding a constant value to a subarray would erase its
+dates). I ended up writing the equivalent of *numpy.core.ma* for my
+particular class, ufuncs included. Everything went fine until I needed to
+subclass my new class, when more problems showed up: some attributes of
+the new subclass were lost during processing. I identified the culprit as
+MaskedArray, which returns masked ndarrays when I expected masked
+arrays of my class. I was preparing myself to rewrite *numpy.core.ma*
+when I forced myself to learn how to subclass ndarrays. As I became more
+familiar with the *__new__* and *__array_finalize__* methods,
+I started to wonder why masked arrays were objects, and not ndarrays,
+and whether it wouldn't be more convenient for subclassing if they did
+behave like regular ndarrays.
+
+The new *maskedarray* is what I eventually come up with. The
+main differences with the initial *numpy.core.ma* package are
+that MaskedArray is now a subclass of *ndarray* and that the
+*_data* section can now be any subclass of *ndarray*. Apart from a
+couple of issues listed below, the behavior of the new M
+
+--- README (cardano hackathon\.venv\Lib\site-packages\pip\_vendor\README.rst) ---
+================
+Vendoring Policy
+================
+
+* Vendored libraries **MUST** not be modified except as required to
+  successfully vendor them.
+* Vendored libraries **MUST** be released copies of libraries available on
+  PyPI.
+* Vendored libraries **MUST** be available under a license that allows
+  them to be integrated into ``pip``, which is released under the MIT license.
+* Vendored libraries **MUST** be accompanied with LICENSE files.
+* The versions of libraries vendored in pip **MUST** be reflected in
+  ``pip/_vendor/vendor.txt``.
+* Vendored libraries **MUST** function without any build steps such as ``2to3``
+  or compilation of C code, practically this limits to single source 2.x/3.x and
+  pure Python.
+* Any modifications made to libraries **MUST** be noted in
+  ``pip/_vendor/README.rst`` and their corresponding patches **MUST** be
+  included ``tools/vendoring/patches``.
+* Vendored libraries should have corresponding ``vendored()`` entries in
+  ``pip/_vendor/__init__.py``.
+
+Rationale
+=========
+
+Historically pip has not had any dependencies except for ``setuptools`` itself,
+choosing instead to implement any functionality it needed to prevent needing
+a dependency. However, starting with pip 1.5, we began to replace code that was
+implemented inside of pip with reusable libraries from PyPI. This brought the
+typical benefits of reusing libraries instead of reinventing the wheel like
+higher quality and more battle tested code, centralization of bug fixes
+(particularly security sensitive ones), and better/more features for less work.
+
+However, there are several issues with having dependencies in the traditional
+way (via ``install_requires``) for pip. These issues are:
+
+**Fragility**
+   When pip depends on another library to function then if for whatever reason
+   that library either isn't installed or an incompatible version is installed
+   then pip ceases to function. This is of course true for all Python
+   applications, however for every application *except* fo
+
+--- README (cardano hackathon\.venv\Lib\site-packages\sklearn\datasets\images\README.txt) ---
+Image: china.jpg
+Released under a creative commons license. [1]
+Attribution: Some rights reserved by danielbuechele [2]
+Retrieved 21st August, 2011 from [3] by Robert Layton
+
+[1] https://creativecommons.org/licenses/by/2.0/
+[2] https://www.flickr.com/photos/danielbuechele/
+[3] https://www.flickr.com/photos/danielbuechele/6061409035/sizes/z/in/photostream/
+
+
+Image: flower.jpg
+Released under a creative commons license. [1]
+Attribution: Some rights reserved by danielbuechele [2]
+Retrieved 21st August, 2011 from [3] by Robert Layton
+
+[1] https://creativecommons.org/licenses/by/2.0/
+[2] https://www.flickr.com/photos/vultilion/
+[3] https://www.flickr.com/photos/vultilion/6056698931/sizes/z/in/photostream/
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\sklearn\externals\README) ---
+This directory contains bundled external dependencies that are updated
+every once in a while.
+
+Note for distribution packagers: if you want to remove the duplicated
+code and depend on a packaged version, we suggest that you simply do a
+symbolic link in this directory.
+
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\sklearn\externals\array_api_compat\README.md) ---
+Update this directory using maint_tools/vendor_array_api_compat.sh
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\sklearn\externals\array_api_extra\README.md) ---
+Update this directory using maint_tools/vendor_array_api_extra.sh
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\sympy\parsing\autolev\test-examples\README.txt) ---
+# parsing/tests/test_autolev.py uses the .al files in this directory as inputs and checks
+# the equivalence of the parser generated codes and the respective .py files.
+
+# By default, this directory contains tests for all rules of the parser.
+
+# Additional tests consisting of full physics examples shall be made available soon in
+# the form of another repository. One shall be able to copy the contents of that repo
+# to this folder and use those tests after uncommenting the respective code in
+# parsing/tests/test_autolev.py.
+
+
+--- README (cardano hackathon\.venv\Lib\site-packages\torchgen\packaged\autograd\README.md) ---
+If you add a file to this directory, you **MUST** update
+`torch/CMakeLists.txt` and add the file as a dependency to
+the `add_custom_command` call.
+
+
+--- README (cardano hackathon\backend\README.md) ---
+# T7 MediScan AI - Backend
+
+FastAPI backend for diabetes pre-screening with Cardano blockchain anchoring via Blockfrost.
+
+## Features
+
+- 🤖 **AI Screening Inference** - Placeholder heuristic model (ready for real PyTorch/ONNX model)
+- 🔗 **Blockfrost Integration** - Real IPFS pinning on Cardano preprod network
+- 🏥 **Medical-Grade API** - Structured endpoints matching frontend expectations
+- 🔒 **Secure & Validated** - Input validation, error handling, CORS protection
+
+## Setup
+
+### 1. Install Dependencies
+
+```bash
+cd "d:\cardano hackathon\backend"
+pip install -r requirements.txt
+```
+
+### 2. Configure Environment
+
+Get your Blockfrost Project ID:
+1. Go to https://blockfrost.io
+2. Create a free account
+3. Create a new project for **Cardano Preprod**
+4. Copy your project ID
+
+Create `.env` file:
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your project ID:
+```
+BLOCKFROST_PROJECT_ID=preprodYOUR_ACTUAL_PROJECT_ID
+```
+
+### 3. Run the Server
+
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+The API will be available at `http://localhost:8000`
+
+## API Endpoints
+
+### `GET /health`
+
+Health check with Blockfrost connectivity test.
+
+**Response:**
+```json
+{
+  "status": "ok",
+  "blockfrost": {
+    "connected": true,
+    "network": "preprod",
+    "status": "healthy"
+  }
+}
+```
+
+### `POST /predict`
+
+AI screening inference from eye and nail images.
+
+**Request:** `multipart/form-data`
+- `patientId` (string): Patient identifier
+- `eyeImage` (file): Eye/retinal image (JPG/PNG, max 5MB)
+- `nailImage` (file): Nail bed image (JPG/PNG, max 5MB)
+
+**Response:**
+```json
+{
+  "screeningId": "SCR-A1B2C3D4",
+  "patientId": "P-12345",
+  "riskScore": "Medium (65/100)",
+  "confidence": 0.78,
+  "explanation": "Moderate irregularities observed in retinal vessel architecture..."
+}
+```
+
+**Example with cURL:**
+```bash
+curl -X POST http://localhost:8000/predict \
+  -F "patientId=P-12345" \
+  -F "eyeImage=@path/to/eye.jpg" \
+  -F "nailImage=@path/to/nail.jpg"
+```
+
+### `POST /store-on-chain`
+
+Anchor sc
+
+--- README (cardano hackathon\screening-app\README.md) ---
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+--- README (cardano hackathon\screening-app - Copy\README.md) ---
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+--- README (cardano hackathon\screening-app - Copy (2)\README.md) ---
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+==== PROJECT: chatbot ====
+Path: chatbot
+Technologies: Python
+Total Files: 49
+Sample Files: .gitignore, project1.py, project2.py, README.md, tempCodeRunnerFile.py, test1.py, test2.py, test3.py, test4.py, test5.py, test6.py, test7.py, desktopmate\API KEYS.txt, desktopmate\GROQai 28-07.txt, desktopmate\my_resume.json, desktopmate\preview.txt, desktopmate\tasks.txt, myenv\.gitignore, myenv\pyvenv.cfg, myenv\Scripts\activate
+--- README (chatbot\README.md) ---
+# MultiBot - Multimodal Conversation & Vision System
+
+A modular conversational agent combining SQL-backed chatbot brains (ChatterBot), NLP engines, and OpenCV/MediaPipe webcam computer vision feedback.
+
+# Overview
+Most chatbot interfaces are limited to single-modality text streams, lacking situational awareness or environmental context. `MultiBot` introduces a multi-modal agent platform. It coordinates NLP response engines (ChatterBot with SQL storage layers) with real-time webcam computer vision inputs. The CV pipelines track face and eye positions (Haar Cascades for eye contact detection) and hand gesture coordinates (MediaPipe landmarks), establishing a foundation for context-aware digital assistants.
+
+# Core Engineering Highlights
+* **Webcam Gesture Landmark Tracker**: Uses MediaPipe Hands to extract coordinate matrices and calculate Euclidean distances for gesture recognition.
+* **Eye-Contact Biometrics**: Integrates OpenCV Haar Cascades to isolate facial regions and detect eye coordinates, logging engagement metrics.
+* **SQL Chatbot Storage**: Deploys ChatterBot with `SQLStorageAdapter` configurations to persist trained dialogues in an SQLite database.
+* **Dynamic Search Routing**: Integrates Google Search scrapers to dynamically fetch fallback answers for queries outside the local corpus.
+
+# What Makes This Project Different
+`MultiBot` combines conversational NLP with physical vision tracking. Instead of just replying to text, the codebase is structured to hook vision states (e.g. hand coordinates, eye contact logs) directly into conversational logic. The local SQL database maps conversation histories, while the OpenCV capture threads run asynchronously to prevent interface bottlenecks.
+
+# System Architecture
+```mermaid
+graph TD
+    UserCam[User Webcam] --> |Video Feed| OpenCV[OpenCV & MediaPipe]
+    OpenCV --> |Gesture & Eye Telemetry| Agent[Multimodal Agent Orchestrator]
+    UserText[User Text Input] --> |NLP Query| Agent
+    Agent --> |Fetch Local Reply| S
+
+==== PROJECT: cnn face recogniasaiton ====
+Path: cnn face recogniasaiton
+Technologies: Python, JavaScript, CSS, Jupyter Notebook, TypeScript, HTML
+Total Files: 69
+Sample Files: .gitignore, README.md, MODEL NEW\door_face-main (1).zip, MODEL NEW\door_face-main\.gitignore, MODEL NEW\door_face-main\eslint.config.js, MODEL NEW\door_face-main\index.html, MODEL NEW\door_face-main\package-lock.json, MODEL NEW\door_face-main\package.json, MODEL NEW\door_face-main\postcss.config.js, MODEL NEW\door_face-main\README.md, MODEL NEW\door_face-main\tailwind.config.js, MODEL NEW\door_face-main\tsconfig.app.json, MODEL NEW\door_face-main\tsconfig.json, MODEL NEW\door_face-main\tsconfig.node.json, MODEL NEW\door_face-main\vite.config.ts, MODEL NEW\door_face-main\backend\app.py, MODEL NEW\door_face-main\backend\database.py, MODEL NEW\door_face-main\backend\face_recognition_module.py, MODEL NEW\door_face-main\backend\mqtt_client.py, MODEL NEW\door_face-main\backend\requirements.txt
+--- README (cnn face recogniasaiton\README.md) ---
+# LockVision - IoT Face Recognition Access Controller
+
+A production-grade IoT face recognition access controller deploying a Flask backend, face_recognition embeddings, SQLite database logs, and MQTT broker relays.
+
+# Overview
+Keycard and PIN-based door security systems are vulnerable to credential sharing and physical theft. Traditional face recognition systems are often computationally heavy and run disconnected from physical locks and monitoring logs. `LockVision` implements a secure, IoT-connected facial access controller. It runs real-time facial recognition via OpenCV, matches facial embeddings against database signatures, records transactions in an SQLite ledger, and dispatches lock/unlock payloads to physical relays via the MQTT protocol, providing an end-to-end IoT security system.
+
+# Core Engineering Highlights
+* **Facial Embedding Comparator**: Uses the `face_recognition` library to extract facial vectors and calculate distances against registered users.
+* **MQTT Telemetry Client**: Deploys a background MQTT publisher to transmit door-state payloads (`lock/unlock`) to microcontrollers (ESP32/Raspberry Pi) over local brokers.
+* **ACID SQLite Access Ledger**: Implements a structured database schema logging name, timestamps, access decisions, and model confidence scores.
+* **React + TS Access Log client**: Includes a frontend client displaying live activity logs and webcam streams.
+* **Thread-Safe Camera Lock**: Employs Python threading locks (`camera_lock = threading.Lock()`) to prevent resource conflicts during frame capture.
+
+# What Makes This Project Different
+`LockVision` bridges the gap between machine learning models and hardware-level IoT systems. It features a self-refreshing cache (`refresh_interval = 300`) that automatically reloads user face encodings when new profiles are added to the directory. It enforces custom cooldowns (`recognition_cooldown = 3`) to prevent redundant log writing and duplicate lock commands.
+
+# System Architecture
+```mermai
+
+--- README (cnn face recogniasaiton\MODEL NEW\door_face-main\README.md) ---
+# Face Recognition Door Access Control System
+
+A comprehensive face recognition-based door access control system with real-time monitoring, ESP32 integration, and a modern web dashboard.
+
+## System Architecture
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Camera        │    │   Face Rec      │    │   Door Lock     │
+│   (Webcam)      │───▶│   (Pretrained)  │───▶│   (ESP32)       │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Alert System  │    │   MQTT Broker   │    │   Web UI        │
+│   (Popups)      │◀───│   (Mosquitto)   │◀───│   (Dashboard)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+## Features
+
+- **Real-time Face Recognition**: Continuous monitoring using pretrained face recognition models
+- **Automatic Door Control**: Unlock door for recognized users, auto-lock after timeout
+- **ESP32 Integration**: Control physical door locks via MQTT
+- **Modern Web Dashboard**: Real-time status, live camera feed, access logs, and statistics
+- **Comprehensive Alerts**: Desktop notifications with sound for all door events
+- **Access Logging**: Complete audit trail with timestamps and confidence scores
+- **User Management**: Simple user addition by placing images in known_users folder
+- **Security Features**: Cooldown periods, tamper detection, manual override
+
+## Prerequisites
+
+### Backend
+- Python 3.8+
+- Webcam
+- MQTT Broker (Mosquitto recommended)
+
+### Frontend
+- Node.js 16+
+- npm or yarn
+
+### Hardware (Optional)
+- ESP32 development board
+- Relay module or solenoid lock
+- Magnetic door sensor
+- Push button for manual override
+
+## Installation
+
+### 1. Backend Setup
+
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/
+
+--- README (cnn face recogniasaiton\MODEL NEW\door_face-main\esp32\README.md) ---
+# ESP32 Door Lock Control
+
+This folder contains the MicroPython firmware for the ESP32 microcontroller that controls the physical door lock.
+
+## Hardware Requirements
+
+- ESP32 development board
+- 5V Relay module or solenoid lock
+- Magnetic door sensor (reed switch)
+- Push button for manual override
+- Power supply (5V for relay, 3.3V for ESP32)
+
+## Wiring Diagram
+
+```
+ESP32 Pin 23 -> Relay Module IN
+ESP32 Pin 18 -> Door Sensor Signal
+ESP32 Pin 19 -> Manual Button (with internal pull-up)
+ESP32 GND    -> Common Ground
+Relay VCC    -> 5V Power Supply
+Relay GND    -> GND
+Door Sensor  -> Pin 18 + GND
+Button       -> Pin 19 + GND
+```
+
+## Installation
+
+### 1. Install MicroPython on ESP32
+
+Download MicroPython firmware from https://micropython.org/download/esp32/
+
+Flash to ESP32:
+```bash
+esptool.py --port /dev/ttyUSB0 erase_flash
+esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 esp32-xxx.bin
+```
+
+### 2. Install umqtt library
+
+Connect to ESP32 via serial and run:
+```python
+import upip
+upip.install('micropython-umqtt.simple')
+```
+
+### 3. Configure Settings
+
+Edit `config.py`:
+```python
+WIFI_SSID = "Your_WiFi_Network"
+WIFI_PASSWORD = "Your_WiFi_Password"
+MQTT_BROKER = "192.168.1.100"  # IP of computer running backend
+```
+
+### 4. Upload Files
+
+Upload both `main.py` and `config.py` to ESP32 using:
+- **ampy**: `ampy --port /dev/ttyUSB0 put main.py`
+- **Thonny**: File -> Save to MicroPython device
+- **WebREPL**: Upload via web interface
+
+## Configuration Options
+
+### WiFi Settings
+- `WIFI_SSID`: Your WiFi network name
+- `WIFI_PASSWORD`: Your WiFi password
+
+### MQTT Settings
+- `MQTT_BROKER`: IP address of MQTT broker (backend server)
+- `MQTT_PORT`: MQTT port (default: 1883)
+- `MQTT_CLIENT_ID`: Unique client identifier
+
+### GPIO Pins
+- `RELAY_PIN`: GPIO pin connected to relay (default: 23)
+- `DOOR_SENSOR_PIN`: GPIO pin connected to door sensor (default: 18)
+- `MANUAL_BUTTON_PIN`: GPIO pin connected to manual button (default: 19)
+
+### Behavior
+- `UNLOCK_DURATION`: How
+
+--- README (cnn face recogniasaiton\MODEL NEW\door_face-main\known_users\README.txt) ---
+Place authorized user images in this folder.
+
+REQUIREMENTS:
+- One face per image
+- Clear, front-facing photos
+- Good lighting
+- Supported formats: .jpg, .jpeg, .png, .bmp
+
+NAMING:
+- Name files after the user (e.g., "john_smith.jpg")
+- Underscores will be converted to spaces in display
+
+EXAMPLES:
+- john_doe.jpg -> "John Doe"
+- alice_smith.png -> "Alice Smith"
+- bob.jpg -> "Bob"
+
+The system automatically refreshes every 5 minutes to detect new users.
+
+
+--- README (cnn face recogniasaiton\model1\Automated-Attendance-System-using-CNN-master\README.md) ---
+# This is the official implementation of
+
+## An End-to-End Real-Time Face Identification and Attendance System using Convolutional Neural Networks 
+(https://ieeexplore.ieee.org/document/9029001)
+
+
+
+An end-to-end face identification and attendance approach using Convolutional Neural Networks (CNN), which processes the CCTV footage or a video of the class and mark the attendance of the entire class simultaneously. One of the main advantages of the proposed solution is its robustness against usual challenges like occlusion (partially visible/covered faces), orientation, alignment and luminescence of the classroom.
+
+# Libraries
+1. Tensorflow 1.14
+2. Numpy
+3. OpenCV
+4. MTCNN
+5. Sklearn
+6. xlsxwriter, xlrd
+7. scipy
+8. pickle
+
+
+# How to use
+
+## Installation
+1. Install the required libraries. (Conda environment preferred).
+2. Download the pre-trained model from [[link]](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-) and copy to the main directory.
+3. Make sure to have the below mentioned directory structure (you've to manually create two folders named "attendance" and "output" in the main directory | refer to the "Main" directory structure).
+4. To verify if everything is installed correctly, run 'user_interface.py'.
+
+## Create Dataset
+1. Run 'user_interface.py'
+2. Click on the 'Create' button.
+3. Select 'webcam' if you wish to create live dataset. (you can leave all other fileds empty)
+4. Click on the 'Continue' button to start streaming webcam feed.
+5. Press 's' to save the face images. Take as many images as you can take. (approx. 80-100 preferred)
+6. Press 'q' to exit.
+7. Likewise create other datasets.
+
+## Training
+1. Run 'user_interface.py'
+2. Click on the 'Train' button.
+3. Training may take several minutes (depending upon your system configuration).
+4. Once training is completed, a 'classifier.pkl' file will be generated.
+
+## Run
+1. Run 'user_interface.py'
+2. Click on the 'Run' button.
+3. Select 'Webcam' fom the list and leave all fields blank.
+4
+
+--- README (cnn face recogniasaiton\model2\Real-Time-Face-Recognition-Using-CNN-master\README.md) ---
+# Real Time Face Recognition Using CNN
+
+A robust real-time face recognition system implemented using Convolutional Neural Networks (CNN). This project provides an end-to-end solution for face detection, data collection, model training, and real-time recognition using Python and deep learning techniques.
+
+## Key Features
+- Real-time face detection and recognition using webcam
+- Custom CNN architecture for improved accuracy
+- Easy-to-use data collection interface
+- Automatic face detection and cropping
+- Real-time FPS counter and performance metrics
+- Support for multiple face recognition
+- Batch training with validation split
+- Model checkpointing for best weights
+
+## System Requirements
+
+### Hardware
+- Webcam (built-in or external)
+- Minimum 4GB RAM (8GB recommended)
+- CPU with SSE2 instruction set support
+
+### Software
+- Python 3.7 or higher
+- Operating System: Windows 10/11, macOS, or Linux
+
+### Dependencies
+- OpenCV (cv2)
+- TensorFlow 2.x
+- Keras
+- NumPy
+- PIL (Python Imaging Library)
+- dlib
+- imutils
+- h5py
+- scikit-learn
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/Real-Time-Face-Recognition-Using-CNN.git
+cd Real-Time-Face-Recognition-Using-CNN
+```
+
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage Guide
+
+### 1. Data Collection
+```bash
+python src/data_collection/face_dataset.py
+```
+This script will:
+- Activate your webcam
+- Detect faces in real-time
+- Capture 70 images of your face from different angles
+- Save the processed images in the `dataset` directory
+- Display real-time FPS and image capture count
+
+**Tips for better data collection:**
+- Ensure good lighting conditions
+- Move your face slowly to capture different angles
+- Maintain a distance of 0.5-1 meter from the camera
+- Try different facial expressions
+
+### 2. Model Training
+```bash
+python src/training/face_training.py
+```
+This will:
+- Process the collected face images
+- Create and train the CNN model
+- Save the best mod
+
+--- README (cnn face recogniasaiton\model3\AI-Powered-Face-Recognition-Door-Lock-System-main\AI-Powered-Face-Recognition-Door-Lock-System-main\README.md) ---
+# 🔐 AI-Powered Face Recognition Door Lock System
+
+<div align="center">
+  <img src="https://roc.ai/wp-content/uploads/2018/11/howfrworks-980x491.png.webp" alt="AI Door Lock System in Action" />
+  
+  [![Python](https://img.shields.io/badge/Python-3.7%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+  [![TensorFlow](https://img.shields.io/badge/TensorFlow-Lite-orange?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/)
+  [![OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-green?style=for-the-badge&logo=opencv)](https://opencv.org/)
+  [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4B-red?style=for-the-badge&logo=raspberry-pi)](https://www.raspberrypi.org/)
+  
+  <p align="center">
+    <strong>🎯 99.7% Accuracy</strong> • <strong>⚡ Real-time Processing</strong> • <strong>🔒 Enhanced Security</strong>
+  </p>
+</div>
+
+## 📖 Overview
+
+Transform your traditional door lock into an intelligent security system! This project implements an advanced, AI-powered face recognition door lock system using a Raspberry Pi, servo motors, and a camera. The system employs deep learning techniques to accurately identify authorized individuals and control access, offering a high-tech, hands-free security solution for homes or offices.
+
+
+## ⭐ Key Features
+
+- 👁️ Real-time face detection and recognition
+- 📊 Exceptional accuracy (99.7% on test set)
+- 🔄 Servo motor control for physical lock mechanism
+- ⚡ Optimized for resource-constrained devices (Raspberry Pi)
+- 👥 Scalable to multiple users
+
+## 🛠️ Technical Stack
+
+### Hardware Components
+- 🤖 Raspberry Pi
+- 🎮 Servo Motor
+- 📷 Camera Module
+
+### Software Framework
+- 🐍 Python
+- 🧠 TensorFlow (converted to TensorFlow Lite)
+- 👁️ OpenCV
+- ⚡ RPi.GPIO
+
+## 🧠 Machine Learning Model
+
+Our custom-built Convolutional Neural Network (CNN) achieves an impressive 99.7% accuracy on the test set. 
+
+### Model Architecture
+```
+[Input Layer]
+      ↓
+[Conv2D + MaxPool2D]
+      ↓
+[Conv2D + MaxPool2D]
+      ↓
+[Flatten]
+      ↓
+[De
+
+==== PROJECT: codevita ====
+Path: codevita
+Technologies: Python
+Total Files: 3
+Sample Files: .gitignore, ques1.py, README.md
+--- README (codevita\README.md) ---
+# CodeVita - Algorithmic Contest Solutions
+
+A collection of optimized python solutions addressing complex data structures, graph theory, and dynamic programming challenges.
+
+# Overview
+Solving performance-critical algorithmic challenges under strict time constraints requires optimized data structures, time-complexity analysis, and clean logic. `CodeVita` compiles Python solutions for competitive programming. These scripts implement advanced algorithms (DFS/BFS, Dijkstra's, dynamic programming memoization, binary searches) to resolve complex computational constraints.
+
+# Core Engineering Highlights
+* **Graph Algorithms**: Implements optimized graph traversals and shortest-path solvers.
+* **Dynamic Programming**: Uses memoization and tabulation to optimize recursive functions.
+* **Efficient I/O Handlers**: Deploys fast input/output parsing routines to prevent timeout errors.
+
+# Tech Stack & Rationale
+* **Python** -> Dynamic scripting, rich built-in collections, and rapid debugging.
+
+# Future Expansion
+* **Automated Test Runner**: Build a shell script to run solution binaries against target input/output test cases.
+* **Complexity Benchmarks**: Include runtime profiles comparing execution times across different algorithms.
+
+# Developer Notes
+This repository documents algorithmic R&D, focused on optimizing loops and memory allocations to meet competitive programming limits.
+
+
+==== PROJECT: company-diary-mvp ====
+Path: company-diary-mvp
+Technologies: JavaScript, CSS, HTML
+Total Files: 62
+Sample Files: .gitignore, README.md, backend\.env.example, backend\package-lock.json, backend\package.json, backend\server.js, backend\config\database.js, backend\middleware\auth.js, backend\middleware\errorHandler.js, backend\routes\auth.js, backend\routes\entries.js, backend\routes\search.js, backend\services\searchService.js, backend\services\textProcessing.js, backend\utils\logger.js, backend\utils\validators.js, database\init.sql, database\migrations\001_initial_schema.sql, frontend\.env, frontend\.gitignore
+--- README (company-diary-mvp\README.md) ---
+# LogBook - Corporate Activity Journal MVP
+
+A production-ready full-stack corporate knowledge journal deploying a Node/Express API, Supabase relational mapping, JWT authentication, and structured validation.
+
+# Overview
+Organizations lose critical operational context when internal activity reports and technical notes are siloed across scattered chat channels. `LogBook` provides a secure, full-stack corporate journal platform. It manages entries via a Node.js Express API, runs text validation, and stores relational records in a Supabase PostgreSQL database, establishing a central knowledge directory for team activities.
+
+# Core Engineering Highlights
+* **Relational Schema Migrations**: Employs structured SQL migrations (`001_initial_schema.sql`) to define users, teams, and journal tables.
+* **JWT Authentication Gate**: Configures server-side route guards verifying JSON Web Tokens and verifying user records in Supabase.
+* **Text Processing Services**: Outlines helper modules (`textProcessing.js`) to parse and tag entry contents.
+* **Unified Error Orchestrator**: Implements server-side middlewares mapping validation errors, JWT expirations, and API exceptions.
+* **Structured Logger**: Configures winston-based logging for API requests, user IPs, and system errors.
+
+# What Makes This Project Different
+`LogBook` is built for secure corporate environments. The Supabase connection client is configured with service-role privileges that bypass Row-Level Security safely on the server side (`autoRefreshToken: false`, `persistSession: false`), enforcing access rules directly in the API controllers.
+
+# System Architecture
+```mermaid
+graph TD
+    Client[React Frontend] --> |API Request + JWT| Express[Express Backend]
+    Express --> |Authenticate Token| Auth[Auth Middleware]
+    Express --> |Database Queries| Supabase[Supabase PostgreSQL]
+    Express --> |Text Categorization| Proc[Text Processing Service]
+    Express --> |Error Logging| Logger[Winston Logger]
+```
+* **API Routing T
+
+--- README (company-diary-mvp\frontend\README.md) ---
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-re
+
+==== PROJECT: dragon ====
+Path: dragon
+Technologies: Java, HTML
+Total Files: 78
+Sample Files: .flutter-plugins-dependencies, .gitignore, .metadata, analysis_options.yaml, build_error.log, dragon_companion.iml, implementation_plan.md.resolved, pubspec.lock, pubspec.yaml, README.md, task.md.resolved, .dart_tool\package_config.json, .dart_tool\package_graph.json, .dart_tool\version, .dart_tool\dartpad\web_plugin_registrant.dart, .dart_tool\flutter_build\40526d7af70eb42a65d4deb0af4cff3b\.filecache, .dart_tool\flutter_build\40526d7af70eb42a65d4deb0af4cff3b\dart2wasm.stamp, .dart_tool\flutter_build\40526d7af70eb42a65d4deb0af4cff3b\dart_build.d, .dart_tool\flutter_build\40526d7af70eb42a65d4deb0af4cff3b\dart_build.stamp, .dart_tool\flutter_build\40526d7af70eb42a65d4deb0af4cff3b\dart_build_result.json
+--- README (dragon\README.md) ---
+# Dragon Companion - Flutter Mobile Client
+
+A cross-platform Flutter companion utility built to manage application states, local device layouts, and system configurations.
+
+# Overview
+Developing mobile utilities that remain consistent across Android, iOS, and Web requires structured state managers and modular layout engines. `Dragon Companion` provides a cross-platform mobile client built on Flutter. It structures view files, hooks into plugin interfaces, and manages compilation outputs, delivering a lightweight dashboard for systems integrations.
+
+# Core Engineering Highlights
+* **Cross-Platform Compilation**: Structures Dart configurations compiling to native mobile code and Web builds.
+* **Modular View Layouts**: Defines reusable widgets and UI containers.
+* **System Plugins Mapping**: Tracks package and dependency configurations in `pubspec.yaml`.
+
+# Tech Stack & Rationale
+* **Flutter & Dart** -> High-performance rendering, single codebase efficiency, and native hardware access.
+
+# Future Expansion
+* **REST API Connector**: Connect UI layouts to remote server APIs.
+* **SQLite Local Caching**: Implement local SQLite storage (Hive or sqflite) to support offline states.
+
+# Developer Notes
+This companion client was designed to prototype mobile layouts. Iterative updates focused on widget design and build pipeline optimization.
+
+
+==== PROJECT: emopet ====
+Path: emopet
+Technologies: 
+Total Files: 3
+Sample Files: .gitignore, EmoPet.pdf, README.md
+--- README (emopet\README.md) ---
+# EmoPet - Bio-Interactive Companion System
+
+Strategic product blueprints and system requirements for an emotional AI companion system.
+
+# Overview
+This folder contains the system specifications and product design proposals for `EmoPet` (an emotional AI companion). It maps out hardware requirements, user interaction flows, and AI behaviors, bridging the gap between product strategy and engineering execution.
+
+# Core Highlights
+* **System Requirements**: Outlines sensor arrays, feedback actuators, and AI processing parameters.
+* **UX Interaction Flows**: Details how the companion responds to user inputs.
+* **Product Roadmaps**: Strategic plans for development phases.
+
+# Tech Stack & Rationale
+* **Product Strategy** -> Translating AI behaviors into hardware and software requirements.
+
+# Future Expansion
+* **Hardware Prototyping**: Build the initial sensor interface using Raspberry Pi and Python.
+
+# Developer Notes
+This project analyzes interactive product designs, focusing on defining clear system requirements before physical prototyping.
+
+
+==== PROJECT: failed projects ====
+Path: failed projects
+Technologies: JavaScript, CSS, HTML, Python
+Total Files: 142
+Sample Files: .gitignore, README.md, frontend\.env, frontend\firebase.json, frontend\package.json, frontend\public\favicon.ico, frontend\public\index.html, frontend\src\App.css, frontend\src\App.tsx, frontend\src\index.css, frontend\src\index.tsx, frontend\src\tailwind.config.js, frontend\src\components\utils.jsx, frontend\src\components\auth\AuthForm.jsx, frontend\src\components\auth\Login.jsx, frontend\src\components\auth\Register.jsx, frontend\src\components\chat\Chat.jsx, frontend\src\components\chat\MessageBubble.jsx, frontend\src\components\chat\TypingIndicator.jsx, frontend\src\components\dashboard\CompanionCard.jsx
+--- README (failed projects\README.md) ---
+# Experimental Archive - R&D Codebase Museum
+
+A repository of legacy codebases, prototype experiments, and developmental code blocks.
+
+# Overview
+This directory serves as a developmental archive. It stores old feature versions, experimental scripts, and sandbox codebases that were compiled during portfolio R&D, serving as a reference library for software design iterations.
+
+# Developer Notes
+A historic archive of coding experiments, highlighting the trial, error, and architectural shifts that shaped active projects.
+
+
+--- README (failed projects\mad 1 project IIT M\README.md) ---
+# PlacementPortal - Campus Recruitment Management Platform
+
+An enterprise-grade, database-driven Campus Recruitment and Placement platform built with Flask, SQLAlchemy, and SQLite.
+
+# Overview
+Campus placement cells struggle to coordinate student applications, company job postings, and HR approvals due to fragmented, manual record-keeping. Simple spreadsheets lead to application loss and data discrepancies. `PlacementPortal` provides a unified recruitment platform. Built on Flask and SQLAlchemy, it implements relational schemas, enforces user role constraints (Admin, Recruiter, Student), and structures secure portals to coordinate job listings, application review queues, and HR approvals.
+
+# Core Engineering Highlights
+* **Relational Database Design**: Employs SQLAlchemy to map `users`, `recruiter_profiles`, `student_profiles`, and `job_drives` tables with foreign key constraints.
+* **Role-Based Access Guards**: Implements server-side route decorators (`@login_required`, `@role_required`) to restrict access based on user credentials.
+* **Automatic Database Seeding**: Configures seed scripts (`database.py`) that verify and initialize default admin accounts.
+* **Multi-user Dashboard Panels**: Structured Jinja2 layouts managing recruitment metrics, student profiles, and application statuses.
+* **Secure Credentials Hashing**: Imploys SHA256 hashing via Werkzeug security wrappers for user password protection.
+
+# What Makes This Project Different
+`PlacementPortal` is built around relational integrity. If a job drive is deleted, SQLAlchemy cascade deletion rules update the associated student applications automatically. The application forms check eligibility thresholds (e.g. cgpa and backlog limits) before allowing students to submit applications, ensuring data accuracy.
+
+# System Architecture
+```mermaid
+graph TD
+    User[Student / Recruiter / Admin] --> |HTTP Request| App[Flask Server]
+    App --> |Authentication Check| Auth[Role Guards Decorator]
+    Auth --> |Query data
+
+--- README (failed projects\soul echo\readme.md) ---
+
+
+--- README (failed projects\SoulEcho\README.md) ---
+# SoulEcho on Hugging Face Spaces
+
+This is a starter version of the SoulEcho project using Flask (backend) and static HTML (frontend).
+
+## Run Locally
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
+
+==== PROJECT: github ====
+Path: github
+Technologies: 
+Total Files: 2
+Sample Files: .gitignore, README.md
+--- README (github\README.md) ---
+# Git Configurations - Workspace Settings
+
+Global Git repository configurations and ignore files for workspace maintenance.
+
+# Overview
+This folder contains target Git ignore files and repository settings, maintaining clean workspace files and preventing local virtual environments from leaking into public repositories.
+
+
+==== PROJECT: hackathon IIT M x odoo ====
+Path: hackathon IIT M x odoo
+Technologies: CSS, Python, HTML
+Total Files: 16
+Sample Files: .gitignore, README.md, community pulse\app.py, community pulse\db.py, community pulse\forms.py, community pulse\models.py, community pulse\instance\site.db, community pulse\static\style.css, community pulse\templates\base.html, community pulse\templates\create_event.html, community pulse\templates\edit_event.html, community pulse\templates\event_detail.html, community pulse\templates\home.html, community pulse\templates\login.html, community pulse\templates\register.html, instance\site.db
+--- README (hackathon IIT M x odoo\README.md) ---
+# CommunityPulse - Event Orchestration Portal
+
+An event orchestration and registration portal developed for the IIT Madras x Odoo Hackathon, deploying a Flask backend, SQLAlchemy schemas, and WTForms validation.
+
+# Overview
+Organizations hosting multiple public events struggle to manage user registrations, track seat capacities, and publish calendars. Fragmented tools lead to overbooking and data inconsistencies. `CommunityPulse` provides a unified event management portal. Built with Flask and SQLAlchemy, it implements relational schemas mapping users and events, deploys WTForms to validate user inputs, and renders an interactive web interface for event discovery and booking.
+
+# Core Engineering Highlights
+* **Relational Schema Mapping**: Employs SQLAlchemy to map `User` and `Event` tables, implementing foreign key bindings and dynamic backreferences.
+* **WTForms Input Validation**: Secures routes with structured forms (`RegistrationForm`, `LoginForm`, `EventForm`), enforcing data rules and email validations.
+* **State-Preserving Session Manager**: Uses Flask Sessions to manage user logins and restrict booking routes to verified accounts.
+* **Dynamic Query Ingestion**: Queries databases dynamically to list events by date and category.
+
+# System Architecture
+```mermaid
+graph TD
+    Client[Web Browser] --> |Submit Form| App[Flask Server]
+    App --> |Form Validation| WTForms[WTForms Engine]
+    WTForms --> |Success| SQLAlchemy[SQLAlchemy ORM]
+    SQLAlchemy --> |Write Transaction| DB[(SQLite Database)]
+    App --> |Query Events| SQLAlchemy
+    SQLAlchemy --> |Retrieve Records| App
+    App --> |Render HTML| Client
+```
+* **Routing Gate**: Flask server managing user accounts and booking routes.
+* **Validation Layer**: WTForms validating logins and event metadata.
+* **Relational Database**: SQLite storing user sessions and registration ledgers.
+
+# Tech Stack & Engineering Rationale
+* **Flask (Python)** -> Lightweight MVC design enabling rapid prototyping.
+* **SQLAlchemy**
+
+==== PROJECT: hackathon t7 cardano ====
+Path: hackathon t7 cardano
+Technologies: Python, C/C++, JavaScript, CSS, HTML
+Total Files: 2546
+Sample Files: .gitignore, README.md, .venv\.gitignore, .venv\pyvenv.cfg, .venv\Lib\site-packages\deprecation.py, .venv\Lib\site-packages\numpy-2.2.0-cp312-cp312-win_amd64.whl, .venv\Lib\site-packages\six.py, .venv\Lib\site-packages\typing_extensions.py, .venv\Lib\site-packages\annotated_types\py.typed, .venv\Lib\site-packages\annotated_types\test_cases.py, .venv\Lib\site-packages\annotated_types\__init__.py, .venv\Lib\site-packages\annotated_types-0.7.0.dist-info\INSTALLER, .venv\Lib\site-packages\annotated_types-0.7.0.dist-info\METADATA, .venv\Lib\site-packages\annotated_types-0.7.0.dist-info\RECORD, .venv\Lib\site-packages\annotated_types-0.7.0.dist-info\WHEEL, .venv\Lib\site-packages\annotated_types-0.7.0.dist-info\licenses\LICENSE, .venv\Lib\site-packages\anyio\from_thread.py, .venv\Lib\site-packages\anyio\lowlevel.py, .venv\Lib\site-packages\anyio\py.typed, .venv\Lib\site-packages\anyio\pytest_plugin.py
+--- README (hackathon t7 cardano\README.md) ---
+#   c a r d a n o h a c k a t h o n 
+ 
+ #   c a r d a n o h a c k a t h o n 
+ 
+ 
+
+--- README (hackathon t7 cardano\.venv\Lib\site-packages\numpy\ma\README.rst) ---
+==================================
+A guide to masked arrays in NumPy
+==================================
+
+.. Contents::
+
+See http://www.scipy.org/scipy/numpy/wiki/MaskedArray (dead link)
+for updates of this document.
+
+
+History
+-------
+
+As a regular user of MaskedArray, I (Pierre G.F. Gerard-Marchant) became
+increasingly frustrated with the subclassing of masked arrays (even if
+I can only blame my inexperience). I needed to develop a class of arrays
+that could store some additional information along with numerical values,
+while keeping the possibility for missing data (picture storing a series
+of dates along with measurements, what would later become the `TimeSeries
+Scikit <http://projects.scipy.org/scipy/scikits/wiki/TimeSeries>`__
+(dead link).
+
+I started to implement such a class, but then quickly realized that
+any additional information disappeared when processing these subarrays
+(for example, adding a constant value to a subarray would erase its
+dates). I ended up writing the equivalent of *numpy.core.ma* for my
+particular class, ufuncs included. Everything went fine until I needed to
+subclass my new class, when more problems showed up: some attributes of
+the new subclass were lost during processing. I identified the culprit as
+MaskedArray, which returns masked ndarrays when I expected masked
+arrays of my class. I was preparing myself to rewrite *numpy.core.ma*
+when I forced myself to learn how to subclass ndarrays. As I became more
+familiar with the *__new__* and *__array_finalize__* methods,
+I started to wonder why masked arrays were objects, and not ndarrays,
+and whether it wouldn't be more convenient for subclassing if they did
+behave like regular ndarrays.
+
+The new *maskedarray* is what I eventually come up with. The
+main differences with the initial *numpy.core.ma* package are
+that MaskedArray is now a subclass of *ndarray* and that the
+*_data* section can now be any subclass of *ndarray*. Apart from a
+couple of issues listed below, the behavior of the new M
+
+--- README (hackathon t7 cardano\.venv\Lib\site-packages\pip\_vendor\README.rst) ---
+================
+Vendoring Policy
+================
+
+* Vendored libraries **MUST** not be modified except as required to
+  successfully vendor them.
+* Vendored libraries **MUST** be released copies of libraries available on
+  PyPI.
+* Vendored libraries **MUST** be available under a license that allows
+  them to be integrated into ``pip``, which is released under the MIT license.
+* Vendored libraries **MUST** be accompanied with LICENSE files.
+* The versions of libraries vendored in pip **MUST** be reflected in
+  ``pip/_vendor/vendor.txt``.
+* Vendored libraries **MUST** function without any build steps such as ``2to3``
+  or compilation of C code, practically this limits to single source 2.x/3.x and
+  pure Python.
+* Any modifications made to libraries **MUST** be noted in
+  ``pip/_vendor/README.rst`` and their corresponding patches **MUST** be
+  included ``tools/vendoring/patches``.
+* Vendored libraries should have corresponding ``vendored()`` entries in
+  ``pip/_vendor/__init__.py``.
+
+Rationale
+=========
+
+Historically pip has not had any dependencies except for ``setuptools`` itself,
+choosing instead to implement any functionality it needed to prevent needing
+a dependency. However, starting with pip 1.5, we began to replace code that was
+implemented inside of pip with reusable libraries from PyPI. This brought the
+typical benefits of reusing libraries instead of reinventing the wheel like
+higher quality and more battle tested code, centralization of bug fixes
+(particularly security sensitive ones), and better/more features for less work.
+
+However, there are several issues with having dependencies in the traditional
+way (via ``install_requires``) for pip. These issues are:
+
+**Fragility**
+   When pip depends on another library to function then if for whatever reason
+   that library either isn't installed or an incompatible version is installed
+   then pip ceases to function. This is of course true for all Python
+   applications, however for every application *except* fo
+
+--- README (hackathon t7 cardano\backend\README.md) ---
+# T7 MediScan AI - Backend
+
+FastAPI backend for diabetes pre-screening with Cardano blockchain anchoring via Blockfrost.
+
+## Features
+
+- 🤖 **AI Screening Inference** - Placeholder heuristic model (ready for real PyTorch/ONNX model)
+- 🔗 **Blockfrost Integration** - Real IPFS pinning on Cardano preprod network
+- 🏥 **Medical-Grade API** - Structured endpoints matching frontend expectations
+- 🔒 **Secure & Validated** - Input validation, error handling, CORS protection
+
+## Setup
+
+### 1. Install Dependencies
+
+```bash
+cd "d:\cardano hackathon\backend"
+pip install -r requirements.txt
+```
+
+### 2. Configure Environment
+
+Get your Blockfrost Project ID:
+1. Go to https://blockfrost.io
+2. Create a free account
+3. Create a new project for **Cardano Preprod**
+4. Copy your project ID
+
+Create `.env` file:
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your project ID:
+```
+BLOCKFROST_PROJECT_ID=preprodYOUR_ACTUAL_PROJECT_ID
+```
+
+### 3. Run the Server
+
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+The API will be available at `http://localhost:8000`
+
+## API Endpoints
+
+### `GET /health`
+
+Health check with Blockfrost connectivity test.
+
+**Response:**
+```json
+{
+  "status": "ok",
+  "blockfrost": {
+    "connected": true,
+    "network": "preprod",
+    "status": "healthy"
+  }
+}
+```
+
+### `POST /predict`
+
+AI screening inference from eye and nail images.
+
+**Request:** `multipart/form-data`
+- `patientId` (string): Patient identifier
+- `eyeImage` (file): Eye/retinal image (JPG/PNG, max 5MB)
+- `nailImage` (file): Nail bed image (JPG/PNG, max 5MB)
+
+**Response:**
+```json
+{
+  "screeningId": "SCR-A1B2C3D4",
+  "patientId": "P-12345",
+  "riskScore": "Medium (65/100)",
+  "confidence": 0.78,
+  "explanation": "Moderate irregularities observed in retinal vessel architecture..."
+}
+```
+
+**Example with cURL:**
+```bash
+curl -X POST http://localhost:8000/predict \
+  -F "patientId=P-12345" \
+  -F "eyeImage=@path/to/eye.jpg" \
+  -F "nailImage=@path/to/nail.jpg"
+```
+
+### `POST /store-on-chain`
+
+Anchor sc
+
+--- README (hackathon t7 cardano\Frontend\README.md) ---
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+==== PROJECT: html ====
+Path: html
+Technologies: HTML
+Total Files: 12
+Sample Files: .gitignore, 1.html, contact_page.html, image1.png, image2.png, indec.html, index.html, O.SREE_CHAKRA_REDDY-23F3003224- IITM BS.pdf, personal_page.html, R210180_O.SREE CHAKRA REDDY 8.pdf, README.md, resume_page.html
+--- README (html\README.md) ---
+# Student CV Web Portal - Semantic HTML Portfolio
+
+A multi-page portfolio website showcasing developer credentials, built with structured, semantic HTML5.
+
+# Overview
+Static resume files are difficult to search and lack direct links to developer profiles. `Student CV Web Portal` provides an online academic resume. Built using semantic HTML5, it organizes directories into dedicated pages (Home, Academics, Personal, Resume, Contact), structuring tables to present academic transcripts and credentials.
+
+# Core Engineering Highlights
+* **Semantic Document Hierarchy**: Uses HTML5 tags (`address`, `table`, `form`) to structure document layouts.
+* **Multi-Page Route Map**: Implements local navigation paths to link resume sub-sections.
+* **Data Presentation Tables**: Structures tables to display subject lists and grades.
+
+# Tech Stack & Rationale
+* **HTML5** -> Native browser rendering, accessibility compliance, and zero package overhead.
+
+# Future Expansion
+* **TailwindCSS Integration**: Style layout files using a utility-first CSS framework.
+* **Dynamic Contact Form**: Add a backend endpoint to handle contact form submissions.
+
+# Developer Notes
+This static resume website was built to master semantic document design, focusing on creating accessible web structures before styling.
+
+
+==== PROJECT: idk ====
+Path: idk
+Technologies: JavaScript, CSS, HTML
+Total Files: 19
+Sample Files: .gitignore, README.md, echosoul\.env, echosoul\.gitignore, echosoul\dbservice.js, echosoul\groqClient.js, echosoul\package-lock.json, echosoul\package.json, echosoul\server.js, echosoul\supabase.js, echosoul\test-groq.js, echosoul\test1.js, echosoul\data\characters.json, echosoul\public\about.html, echosoul\public\admin.html, echosoul\public\chat.html, echosoul\public\index.html, echosoul\public\login.html, echosoul\public\css\style.css
+--- README (idk\README.md) ---
+# UILabs - Experimental Interface Playground
+
+Isolated sandbox repository dedicated to testing modular UI component layouts, canvas render loops, and web page routing designs.
+
+# Overview
+This repository serves as a frontend interface testing playground. It aggregates experimental HTML structures and vanilla JavaScript routines, providing an isolated environment to draft responsive design layouts, grid alignments, and canvas drawing tests before migrating code to production portals.
+
+
+==== PROJECT: incomplete ====
+Path: incomplete
+Technologies: JavaScript, CSS, HTML
+Total Files: 29
+Sample Files: .env, .gitignore, README.md, ECHOSOUL-20%\.env, ECHOSOUL-20%\package-lock.json, ECHOSOUL-20%\package.json, ECHOSOUL-20%\server.js, ECHOSOUL-20%\test-groq.js, ECHOSOUL-20%\data\characters.json, ECHOSOUL-20%\public\chat.html, ECHOSOUL-20%\public\index.html, ECHOSOUL-20%\public\css\style.css, ECHOSOUL-60%\.env, ECHOSOUL-60%\.gitignore, ECHOSOUL-60%\dbservice.js, ECHOSOUL-60%\groqClient.js, ECHOSOUL-60%\package-lock.json, ECHOSOUL-60%\package.json, ECHOSOUL-60%\server.js, ECHOSOUL-60%\supabase.js
+--- README (incomplete\README.md) ---
+# DevSandbox - Script Benchmarks & Prototypes
+
+Sandbox repository for benchmarking javascript operations and drafting frontend prototype configurations.
+
+# Overview
+An isolated directory dedicated to software prototyping, tracing development paths, testing third-party configurations, and benchmarking javascript execution loops.
+
+

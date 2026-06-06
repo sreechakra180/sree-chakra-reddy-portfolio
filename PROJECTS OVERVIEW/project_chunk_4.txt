@@ -1,0 +1,990 @@
+==== PROJECT: project4 ====
+Path: project4
+Technologies: Python, Jupyter Notebook
+Total Files: 4
+Sample Files: .gitignore, logistic_regression.py, Pratical_Project_02.ipynb, README.md
+--- README (project4\README.md) ---
+# GradientRegressor - Logistic Regression from Scratch
+
+A machine learning classification pipeline implementing binary logistic regression and gradient descent optimization from scratch using NumPy.
+
+# Overview
+Relying entirely on scikit-learn abstracts the underlying mathematical mechanics of ML algorithms, making it difficult to debug convergence anomalies or optimize custom loss functions. `GradientRegressor` implements a binary logistic regression pipeline from scratch. Written in Python using NumPy, it handles data normalization (Min-Max scaling), implements the Sigmoid activation, runs gradient descent optimizations, and plots loss curves, validating numerical classification mechanics.
+
+# Core Engineering Highlights
+* **Gradient Descent Optimizer**: Implements vector-based weight and bias updates to minimize loss functions.
+* **Sigmoid Activation Layer**: Computes non-linear probability boundaries from raw input vectors.
+* **Min-Max Data Scaler**: Standardizes and scales feature values to accelerate model convergence.
+* **Matplotlib Loss Tracker**: Generates real-time charts plotting loss reduction across training runs.
+
+# System Architecture
+```mermaid
+graph TD
+    CSV[Raw CSV Dataset] --> |Min-Max Scaling| Scaled[Scaled Data Matrices]
+    Scaled --> |Weight Multiplication| DotProduct[Linear Combinations]
+    DotProduct --> |Sigmoid Activation| Probability[Activation Values]
+    Probability --> |Calculate Error| Loss[Compute Loss]
+    Loss --> |Gradient Descent| Optimizer[Weight/Bias Update Loop]
+    Optimizer --> |Iterate| DotProduct
+```
+* **Preprocessor Layer**: Scales input dimensions between 0 and 1.
+* **Numerical Core**: NumPy-based array multiplication and gradient updates.
+* **Evaluation Layer**: Generates confusion matrices to audit prediction accuracy.
+
+# Tech Stack & Engineering Rationale
+* **Python** -> Fast array manipulation and visualization library support.
+* **NumPy** -> Vectorized matrix computations, avoiding slow Python loops.
+* **Matplotli
+
+==== PROJECT: projects ====
+Path: projects
+Technologies: Python, CSS, JavaScript, Jupyter Notebook, TypeScript, HTML, Docker
+Total Files: 1151
+Sample Files: .gitignore, PASSIVE 9INCOME.txt, project4.zip, README.md, Screenshot 2022-03-08 161430.png, ssyt.png, W6g-5.png, W8G-11s.png, week3.pdf, ww1.png, 1\Capture1.PNG, 1\chatbot.py, 1\q1.PNG, 1\q2.PNG, 1\q3.PNG, 1\q4.PNG, ayanakoji face replacing\image.png, ayanakoji face replacing\test1.py, ayanakoji face replacing\TEST2.PY, ayanakoji face replacing\test3.py
+--- README (projects\README.md) ---
+# ResearchWorkspace - Master Project Portfolio
+
+A master workspace aggregating multiple data engineering pipelines, machine learning experiments, and UI prototypes.
+
+# Overview
+This folder is a master research workspace containing copy setups of active portfolio codebases (e.g. Chatbots, COVID-19 ETL pipelines, and NLP classifiers). It serves as a central index and developer playground for systems testing.
+
+
+--- README (projects\ETL-Project-master\README.md) ---
+# Covid-19 Infection ETL Project
+By Sanjoy Biswas
+
+## Project Proposal
+Based upon the data compiled by John Hopkins University, I want to explore ''' Insert reasons here'''
+This will be done by extracting the CSV data and migrating it to a PostgreSQL Database.  
+
+## Project Description
+I found data from `data.data.org` that had been compiled from John Hopkins University.  I filtered the data for March 2020 and evaluated the number of cases with respect to the deaths, recovery, and the confirmed cases.  
+
+## Finding Data
+All of the data that we used were from `https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases` where they compiled by the John Hopkins University Center for Systems Science and Engineering (JHU CSSE) from various sources that include the World Health Organisations, Hong Kong Department of Health, European Centre for Disease Prevention and Control, etc.  This data is always being updated so we are narrowing the scope to the month of March.
+
+## Data Cleanup and Analysis
+
+* TRANSFORMATION STEPS
+My transformation steps I needed to clean the data to be readable, presentable, and easy for me to query in the later stages.  This was done by:
+  * Developing a cleaning function in python that would select the data in the month of March 2020.  This was applied to all datasets that I have.
+  * All of the dates that have in the data sets we treated as values through the `pd.melt` function in Pandas.
+  * Found a way of finding the daily increase with respect to each table.  This value was converted from a float to an integer
+
+* LOADING STEPS
+  * I established a connection to a local PostgreSQL server in our desktop to store the data
+  * I have a schema that just makes the tables and we can confirm it throught `engine.table_names()`
+  * I pushed the Pandas DataFrame to the local PostgreSQL server so I can retrieve and query the data in our Jupyter Notebook
+
+* Analysis / SQL Queries
+In this part, I want to find:
+  * Top 5 countries with the most/least c
+
+--- README (projects\nationsheild\README.md) ---
+# NATIONSHIELD AI
+
+A Minimal Viable Product (MVP) for a national security AI system that includes core features for authentication, foreign national screening, threat classification, and interrogation interface.
+
+## Features
+
+1. **Authentication Hub**
+   - Aadhaar Integration (Mock API)
+   - Voice Recognition
+   - Facial Recognition
+
+2. **Foreign National Screening**
+   - Voice-Based Nationality ID
+   - Facial Nationality ID
+
+3. **Threat Classification Engine**
+   - Rule-Based Threat Scoring
+   - Watchlist Integration
+
+4. **Interrogation Interface**
+   - Single-User Dashboard
+   - Upload voice/image samples
+   - View threat scores and nationality predictions
+   - Simulate "interrogation mode"
+
+5. **Data Pipeline**
+   - Local Storage (SQLite)
+   - Batch Analysis
+
+## Setup Instructions
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Initialize the database:
+   ```
+   python src/data/init_db.py
+   ```
+4. Run the application:
+   ```
+   streamlit run src/app.py
+   ```
+
+## Project Structure
+
+```
+nationshield/
+├── data/
+│   ├── mock/                  # Mock data for testing
+│   │   ├── aadhaar/           # Mock Aadhaar database
+│   │   ├── voice_samples/     # Voice samples for testing
+│   │   ├── face_samples/      # Face samples for testing
+│   │   └── watchlist/         # CSV of persons of interest
+│   └── db/                    # SQLite database
+├── models/                    # Pre-trained models
+├── src/
+│   ├── auth/                  # Authentication modules
+│   │   ├── aadhaar.py         # Aadhaar verification
+│   │   ├── voice.py           # Voice recognition
+│   │   └── face.py            # Facial recognition
+│   ├── screening/             # Foreign national screening
+│   │   ├── voice_nationality.py  # Voice-based nationality ID
+│   │   └── face_nationality.py   # Face-based nationality ID
+│   ├── threat/                # Threat classification
+│   │   ├── scoring.py         # Rule-based threat scoring
+│   │   
+
+--- README (projects\nationsheild\face_api\README.md) ---
+# Face Analysis API
+
+A FastAPI backend that integrates DeepFace for facial analysis, providing age, gender, race, emotion detection, and country prediction.
+
+## Features
+
+- Face detection and analysis using DeepFace
+- Supports both base64 and multipart file uploads
+- Analyzes age, gender, race, and emotion
+- Predicts likely country based on race
+- Includes confidence threshold handling
+- CORS-enabled for frontend integration
+- Optimized startup with model preloading
+
+## Installation
+
+### Local Setup
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the application:
+
+```bash
+uvicorn main:app --reload
+```
+
+The API will be available at http://localhost:8000
+
+### Docker Deployment
+
+1. Build the Docker image:
+
+```bash
+docker build -t face-analysis-api .
+```
+
+2. Run the container:
+
+```bash
+docker run -p 8000:8000 face-analysis-api
+```
+
+## API Usage
+
+### Endpoint
+
+`POST /analyze-face`
+
+### Request Options
+
+#### Option 1: Base64 Image
+
+```json
+{
+  "image": "base64_encoded_image_string"
+}
+```
+
+#### Option 2: File Upload
+
+Send a multipart form with a file field named "file".
+
+### Response
+
+```json
+{
+  "age": 30,
+  "gender": "Man",
+  "dominant_race": "asian",
+  "race": {
+    "asian": 0.76,
+    "indian": 0.10,
+    "black": 0.05,
+    "white": 0.04,
+    "middle eastern": 0.03,
+    "latino hispanic": 0.02
+  },
+  "dominant_emotion": "neutral",
+  "emotion": {
+    "neutral": 0.65,
+    "happy": 0.12,
+    "sad": 0.07,
+    "angry": 0.06,
+    "surprise": 0.05,
+    "fear": 0.03,
+    "disgust": 0.02
+  },
+  "predicted_country": "China"
+}
+```
+
+## Example Usage
+
+### cURL Example
+
+```bash
+# Base64 image
+curl -X POST "http://localhost:8000/analyze-face" \
+  -H "Content-Type: application/json" \
+  -d '{"image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/
+
+--- README (projects\spacex failures systematic analysis\README.md) ---
+# IBM-Data-Science-Capstone-SpaceX
+
+# Introduction
+
+![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0701EN-SkillsNetwork/api/Images/landing_1.gif)
+
+## Background
+SpaceX, a leader in the space industry, strives to make space travel affordable for everyone. Its accomplishments include sending spacecraft to the international space station, launching a satellite constellation that provides internet access and sending manned missions to space. SpaceX can do this because the rocket launches are relatively inexpensive ($62 million per launch) due to its novel reuse of the first stage of its Falcon 9 rocket. Other providers, which are not able to reuse the first stage, cost upwards of $165 million each. By determining if the first stage will land, we can determine the price of the launch. To do this, we can use public data and machine learning models to predict whether SpaceX – or a competing company – can reuse the first stage.
+
+## Explore
+* How payload mass, launch site, number of flights, and orbits affect first-stage landing success
+* Rate of successful landings over time
+* Best predictive model for successful landing (binary classification)
+
+## Executive Summary
+The research attempts to identify the factors for a successful rocket landing. To make this determination, the following methodologies where used:
+* **Collect** data using SpaceX REST API and web scraping techniques
+* **Wrangle** data to create success/fail outcome variable
+* **Explore** data with data visualization techniques, considering the following factors: payload, launch site, flight number and yearly trend
+* **Analyze** the data with SQL, calculating the following statistics: total payload, payload range for successful launches, and total # of successful and failed outcomes
+* **Explore** launch site success rates and proximity to geographical markers
+* **Visualize** the launch sites with the most success and successful payload ranges
+* **Build Models** 
+
+--- README (projects\titanic classification\readme.md) ---
+# Titanic Classification Project
+
+**Author:** O.Sree chakra reddy  
+**Roll Number:** 23f3003224  
+**Institution:** IIT Madras
+
+## Overview
+This project uses the Titanic dataset to build a machine learning model that predicts passenger survival. A Random Forest Classifier is used with preprocessing steps including missing value imputation and categorical encoding.
+
+## Dataset
+Columns used:
+- Pclass
+- Sex
+- Age
+- SibSp
+- Parch
+- Fare
+- Embarked
+
+## Model
+- Algorithm: Random Forest Classifier
+- Train/Test Split: 80/20
+- Evaluation Metric: Classification Report
+
+## Results
+          precision    recall  f1-score   support
+
+       0       0.83      0.87      0.85       105
+       1       0.80      0.74      0.77        74
+
+accuracy                           0.82       179
+
+macro avg 0.81 0.80 0.81 179
+weighted avg 0.81 0.82 0.81 179
+
+![alt text](image.png)
+
+## Files
+- `titanic.csv`: The dataset used
+- `titanic_model.py`: Python script for preprocessing, training and evaluation
+- `README.md`: This file
+
+--- README (projects\voice-circle-ai\README.md) ---
+# Voice Circle AI
+
+A minimal multimodal voice-based AI interface with animated circle avatars and multiple AI models.
+
+## Features
+
+- Voice input using Web Speech API
+- Multiple AI models (LLaMA 3, Mixtral, Gemma) via Groq API
+- Animated circle that changes color based on state (listening, speaking, processing)
+- Text-to-speech responses
+- Clean, minimal interface
+
+## Tech Stack
+
+- Frontend: React, Vite, Tailwind CSS, Web Speech API
+- Backend: Node.js, Express, Groq API
+- Deployment: Docker, Docker Compose
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js (v16+)
+- Groq API keys for LLaMA 3, Mixtral, and Gemma
+
+### Setup
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/voice-circle-ai.git
+cd voice-circle-ai
+
+==== PROJECT: python ====
+Path: python
+Technologies: Python
+Total Files: 5
+Sample Files: .gitignore, intro.py, jarvis.py, README.md, romantic.py
+--- README (python\README.md) ---
+# VoiceAssistant & Webhook - AI Desktop Companion
+
+A voice-activated desktop AI assistant and Facebook Messenger webhook bot integrating speech libraries, Google TTS, and OpenAI completions APIs.
+
+# Overview
+Traditional virtual assistants lack custom API integrations or conversational flexibility. `VoiceAssistant` provides an AI-powered desktop companion and Messenger integration. Built in Python using Flask, it captures microphone inputs, processes audio using Google Speech-to-Text, runs conversational prompts via OpenAI APIs, and speaks back responses via Google Text-to-Speech (gTTS), bridging conversational models with local systems.
+
+# Core Engineering Highlights
+* **Dual Interface Gateways**: Outlines a desktop microphone loop and a Facebook Messenger webhook Flask API.
+* **Offline Audio Capturing**: Integrates PyAudio and SpeechRecognition to record and parse microphone inputs.
+* **Google TTS Synthesizer**: Converts model outputs into spoken audio files.
+* **JSON Webhook Controller**: Parses incoming messenger payloads and routes responses.
+
+# System Architecture
+```mermaid
+graph TD
+    Mic[Microphone Input] --> |Record Audio| PyAudio[PyAudio / SpeechRec]
+    PyAudio --> |Speech-to-Text| STT[Google STT API]
+    STT --> |Text Prompt| OpenAI[OpenAI API Gateway]
+    OpenAI --> |Text Response| gTTS[gTTS Engine]
+    gTTS --> |Save MP3| AudioPlay[Playsound Engine]
+    AudioPlay --> |Speak| Speaker[Desktop Speaker]
+```
+* **Voice Ingestion**: PyAudio streams recording and capturing inputs.
+* **API Service Gateway**: Flask server routing webhooks.
+* **Audio Synthesis**: gTTS generating audio responses.
+
+# Tech Stack & Engineering Rationale
+* **Python** -> Fast scripting and support for voice and LLM libraries.
+* **Flask** -> Lightweight web server for webhook routing.
+* **PyAudio & SpeechRecognition** -> Offline microphone capturing.
+* **gTTS & playsound** -> Synthesizes and plays audio without external players.
+* **OpenAI API** -> Provides natural conversational compl
+
+==== PROJECT: quantum ====
+Path: quantum
+Technologies: C/C++
+Total Files: 65
+Sample Files: .gitignore, 1.mp4, 2.mp4, 3.jpg, C++ EXTERNAL LAB.zip, DocScanner Apr 6, 2024 2-57 PM.pdf, edc lab record.pdf, README.md, UNIT-3_MULTIPLE INTEGRALS- MY NOTES.pdf, UNIT-3_MULTIPLE INTEGRALS- RGUKT CONTENT.pdf, WhatsApp Image 2023-11-03 at 15.02.25_532bc885.jpg, WhatsApp Image 2023-11-03 at 15.02.25_9f63b785.jpg, WhatsApp Image 2023-11-03 at 15.02.26_69d63ee0.jpg, WhatsApp Image 2023-11-03 at 15.02.26_f7af2212.jpg, WhatsApp Image 2023-11-03 at 15.02.27_292abdcb.jpg, WhatsApp Image 2023-11-03 at 15.02.27_46398ff9.jpg, WhatsApp Image 2023-11-03 at 15.02.27_ec7704fd.jpg, WhatsApp Image 2023-11-03 at 15.02.28_e49c811f.jpg, WhatsApp Video 2023-11-03 at 14.39.39_52c32bbc.mp4, C++ EXTERNAL LAB\lab 2\a.out
+--- README (quantum\README.md) ---
+# QuantumDocs - Systems Engineering Notes
+
+Academic study guides, mathematical logs, and system design notes.
+
+# Overview
+This repository aggregates technical notes, documentation, and multiple integral study guides, serving as an academic reference library.
+
+
+==== PROJECT: quantum codes ====
+Path: quantum codes
+Technologies: HTML, Python
+Total Files: 4
+Sample Files: .gitignore, 1.html, quantum_phase_expectation.py, README.md
+--- README (quantum codes\README.md) ---
+# QuantumPhaseEstimator - Qiskit Quantum Simulator
+
+A quantum phase estimation circuit simulator built with Qiskit, implementing the inverse Quantum Fourier Transform (QFT) and testing eigenstate phase measurements.
+
+# Overview
+Simulating quantum algorithms on classical hardware is critical to verifying circuit gates before running them on expensive quantum processors. `QuantumPhaseEstimator` implements a phase estimation simulation. Built in Python using Qiskit and AerSimulator, it constructs quantum circuits, prepares counting and state qubits, applies the inverse Quantum Fourier Transform (QFT), and runs measurements, validating quantum algorithm mechanics.
+
+# Core Engineering Highlights
+* **Inverse QFT Implementation**: Implements the inverse Quantum Fourier Transform using swap gates, Hadamard gates, and controlled phase rotations.
+* **Eigenstate Preparation**: Prepares data qubits in specific states (e.g. |1> for T gates) to test phase measurements.
+* **Qiskit Circuit Builder**: Configures quantum circuits with counting qubits, data qubits, and classical measurement registers.
+* **AerSimulator Aer Runner**: Compiles and simulates circuits on local CPU simulators, extracting measurement statistics.
+
+# System Architecture
+```mermaid
+graph TD
+    Qubits[Counting & State Qubits] --> |Hadamard Gates| Superposition[Superposition State]
+    Superposition --> |Controlled Unitary Gates| Phase[Phase Encoding]
+    Phase --> |Inverse QFT Module| IQFT[Inverse QFT Qubits]
+    IQFT --> |Measurement| Register[Classical Registers]
+    Register --> |Aer Simulator| Stats[Measurement Probabilities]
+```
+* **Circuit Preparer**: Sets up qubits in superposition.
+* **Phase Encoder**: Encodes phase targets using controlled unitary rotations.
+* **IQFT Module**: Applies QFT phase rotations.
+* **Simulator Core**: AerSimulator computing measurement outcomes.
+
+# Tech Stack & Engineering Rationale
+* **Python** -> Standard programming interface for quantum computing.
+* **Qiskit** -> IBM's ope
+
+==== PROJECT: research paper 1 ====
+Path: research paper 1
+Technologies: Docker, Python
+Total Files: 149
+Sample Files: .gitignore, remap_net_paper.pdf, remap-net\.gitignore, remap-net\.pre-commit-config.yaml, remap-net\benchmark.py, remap-net\cover_letter.md, remap-net\Dockerfile, remap-net\environment.yml, remap-net\evaluate.py, remap-net\ieepaper.tex, remap-net\LICENSE, remap-net\Makefile, remap-net\pyproject.toml, remap-net\README.md, remap-net\REMAP-Net_IEEE_Paper.pdf, remap-net\REMAP-Net_Publication_Draft.pdf, remap-net\requirements.txt, remap-net\setup.py, remap-net\submission_metadata.md, remap-net\test_layers.py
+--- README (research paper 1\remap-net\README.md) ---
+# A Recursively Adaptive Meta-Plasticity Framework with Lyapunov-Constrained Stability
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
+
+This repository contains the official PyTorch implementation for our framework.
+
+## 1. Problem Statement
+
+Existing meta-learning systems use fixed update rules and lack bounded recursive adaptation. This results in severe catastrophic forgetting and unbounded divergence during higher-order gradient computation on sequential tasks.
+
+## 2. Architecture Overview
+
+Our framework resolves these instabilities through a hierarchically decoupled architecture encompassing three learning layers, governed by a strict Lyapunov stability bound.
+
+![Figure 1a: Architecture Flow Diagram](docs/figure1_architecture.png)
+![Figure 1b: 3D System Architecture](docs/figure1_3d_architecture.png)
+*Figure 1: System architecture displaying the F0/F1/F2 recursion flow, episodic memory retrieval paths, and the automated Stability Guardian enforcement module.*
+
+* **F0 (Object Level):** Task-specific backbones (Transformer, MLP, ResNet).
+* **F1 (Meta-Plasticity):** Learns parameterized update rules $G_\phi$ via low-rank preconditioning.
+* **F2 (Epistemic Recursion):** Higher-order adaptation $H_\psi$ optimizing meta-parameters.
+* **Stability Guardian:** A projection operator enforcing Lyapunov dissipativity.
+* **Autonomous Abstraction Formation (AAF):** Consolidates memory sequences using a Task Coherence Regularizer (TCR).
+
+## 3. Core Equations
+
+We define the parameter state space as $z_t = [\theta_t; \phi_t; \psi_t]^T$. 
+
+**Recursive Update Formulation:**
+$$ \theta_{t+1} = \theta_t + G_\phi(\nabla_\theta \mathcal{L}, h_t, E_t) $$
+$$ \phi_{t+1} = \phi_t + H_\psi(\nabla_\phi M(\phi, \theta, \mathcal{D}_{val})) $
+
+--- README (research paper 1\remap-net\.pytest_cache\README.md) ---
+# pytest cache directory #
+
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+
+**Do not** commit this to version control.
+
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
+
+
+==== PROJECT: soul echo ====
+Path: soul echo
+Technologies: Python, C/C++, Shell, CSS, JavaScript, TypeScript, HTML
+Total Files: 22188
+Sample Files: .gitignore, BREIF DOC.txt, deepseek_mermaid_20250719_655e77.png, README.md, soul echo.rar, soul echo.zip, SoulEcho (1).zip, MODELS\.env, MODELS\jimin.py, MODELS\JUNKCOOK.PY, MODELS\junkook.jpeg, MODELS\TEST.py, MODELS\villan.py, MODELS\villan2.py, MODELS\loved\.env, MODELS\loved\lovedone.py, PROJECT BY GROQ\groq_request.py, PROJECT BY GROQ\soul-echo.zip, PROJECT BY GROQ\.venv\.gitignore, PROJECT BY GROQ\.venv\pyvenv.cfg
+--- README (soul echo\README.md) ---
+# SoulEcho - Persona Roleplay AI Platform
+
+A full-stack persona roleplay API and character model suite deploying Express.js endpoints, SQLite message logs, and python-wrapped Groq SDK persona agents.
+
+# Overview
+Standard LLMs reply with a generic, helpful tone that breaks immersion during creative writing or character roleplay. `SoulEcho` introduces a persona-tuned conversational platform. It manages user authentication, chat channels, and message histories using an Express.js backend and SQLite database. Dynamically, it routes prompts through python wrappers to the Groq SDK, applying strict prompt constraints (system profiles, dialogue context, and behavior rules) to load stable, immersive AI characters (e.g. Jungkook, Jimin), preventing model drift.
+
+# Core Engineering Highlights
+* **Python Persona Wrappers**: Employs Python wrapper scripts configuring Groq SDK hyper-parameters (temperature, top-p) to enforce distinct characters.
+* **Context-Safe Prompt Templates**: Structures relational system prompts containing background contexts, speech styles, and relationship definitions.
+* **Relational Message Logging**: Uses SQLite database schemas to log dialogue histories, maintaining persistent context across sessions.
+* **JWT Express API Gateway**: Secures user channels and coordinates character selection routes.
+
+# What Makes This Project Different
+`SoulEcho` separates prompt configurations (`lovedone.py`, `jimin.py`) from the core Express API router, allowing developers to upload new characters without server restarts. It aggregates database logs to construct a rolling history window on every message request, passing previous interactions to the LLM to preserve roleplay continuity, avoiding memory constraints.
+
+# System Architecture
+```mermaid
+graph TD
+    Client[Web UI Chat Client] --> |API request + JWT| Express[Express Backend Server]
+    Express --> |Authenticate & Log| SQLite[(SQLite Database)]
+    Express --> |Execute Command| Python[Python Character Wrapper]
+ 
+
+--- README (soul echo\PROJECT BY GROQ\.venv\Lib\site-packages\datasets\utils\resources\readme_structure.yaml) ---
+name: "" # Filename comes here
+allow_empty: false
+allow_empty_text: true
+subsections:
+  - name: "Dataset Card for X" # First-level markdown heading
+    allow_empty: false
+    allow_empty_text: true
+    subsections:
+      - name: "Table of Contents"
+        allow_empty: false
+        allow_empty_text: false
+        subsections: null # meaning it should not be checked.
+      - name: "Dataset Description"
+        allow_empty: false
+        allow_empty_text: false
+        subsections:
+          - name: "Dataset Summary"
+            allow_empty: false
+            allow_empty_text: false
+            subsections: null
+          - name: "Supported Tasks and Leaderboards"
+            allow_empty: true
+            allow_empty_text: true
+            subsections: null
+          - name: Languages
+            allow_empty: true
+            allow_empty_text: true
+            subsections: null
+      - name: "Dataset Structure"
+        allow_empty: false
+        allow_empty_text: true
+        subsections:
+          - name: "Data Instances"
+            allow_empty: false
+            allow_empty_text: true
+            subsections: null
+          - name: "Data Fields"
+            allow_empty: false
+            allow_empty_text: true
+            subsections: null
+          - name: "Data Splits"
+            allow_empty: false
+            allow_empty_text: true
+            subsections: null
+      - name: "Dataset Creation"
+        allow_empty: false
+        allow_empty_text: true
+        subsections:
+          - name: "Curation Rationale"
+            allow_empty: true
+            allow_empty_text: true
+            subsections: null
+          - name: "Source Data"
+            allow_empty: false
+            allow_empty_text: true
+            subsections:
+              - name: "Initial Data Collection and Normalization"
+                allow_empty: true
+                allow_empty_text: true
+                subsections: null
+              - name: "Who are the source language producers?"
+     
+
+--- README (soul echo\PROJECT BY GROQ\.venv\Lib\site-packages\numpy\ma\README.rst) ---
+==================================
+A guide to masked arrays in NumPy
+==================================
+
+.. Contents::
+
+See http://www.scipy.org/scipy/numpy/wiki/MaskedArray (dead link)
+for updates of this document.
+
+
+History
+-------
+
+As a regular user of MaskedArray, I (Pierre G.F. Gerard-Marchant) became
+increasingly frustrated with the subclassing of masked arrays (even if
+I can only blame my inexperience). I needed to develop a class of arrays
+that could store some additional information along with numerical values,
+while keeping the possibility for missing data (picture storing a series
+of dates along with measurements, what would later become the `TimeSeries
+Scikit <http://projects.scipy.org/scipy/scikits/wiki/TimeSeries>`__
+(dead link).
+
+I started to implement such a class, but then quickly realized that
+any additional information disappeared when processing these subarrays
+(for example, adding a constant value to a subarray would erase its
+dates). I ended up writing the equivalent of *numpy.core.ma* for my
+particular class, ufuncs included. Everything went fine until I needed to
+subclass my new class, when more problems showed up: some attributes of
+the new subclass were lost during processing. I identified the culprit as
+MaskedArray, which returns masked ndarrays when I expected masked
+arrays of my class. I was preparing myself to rewrite *numpy.core.ma*
+when I forced myself to learn how to subclass ndarrays. As I became more
+familiar with the *__new__* and *__array_finalize__* methods,
+I started to wonder why masked arrays were objects, and not ndarrays,
+and whether it wouldn't be more convenient for subclassing if they did
+behave like regular ndarrays.
+
+The new *maskedarray* is what I eventually come up with. The
+main differences with the initial *numpy.core.ma* package are
+that MaskedArray is now a subclass of *ndarray* and that the
+*_data* section can now be any subclass of *ndarray*. Apart from a
+couple of issues listed below, the behavior of the new M
+
+--- README (soul echo\PROJECT BY GROQ\.venv\Lib\site-packages\pyarrow\tests\data\orc\README.md) ---
+<!---
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+The ORC and JSON files come from the `examples` directory in the Apache ORC
+source tree:
+https://github.com/apache/orc/tree/main/examples
+
+
+--- README (soul echo\PROJECT BY GROQ\.venv\Lib\site-packages\sympy\parsing\autolev\test-examples\README.txt) ---
+# parsing/tests/test_autolev.py uses the .al files in this directory as inputs and checks
+# the equivalence of the parser generated codes and the respective .py files.
+
+# By default, this directory contains tests for all rules of the parser.
+
+# Additional tests consisting of full physics examples shall be made available soon in
+# the form of another repository. One shall be able to copy the contents of that repo
+# to this folder and use those tests after uncommenting the respective code in
+# parsing/tests/test_autolev.py.
+
+
+--- README (soul echo\PROJECT BY GROQ\.venv\Lib\site-packages\torchgen\packaged\autograd\README.md) ---
+If you add a file to this directory, you **MUST** update
+`torch/CMakeLists.txt` and add the file as a dependency to
+the `add_custom_command` call.
+
+
+--- README (soul echo\project1\frontend\README.md) ---
+
+
+==== PROJECT: spacex failures systematic analysis ====
+Path: spacex failures systematic analysis
+Technologies: Python, Jupyter Notebook
+Total Files: 10
+Sample Files: .gitignore, 02_SpaceX_Web_Scraping.ipynb, 03_SpaceX_Data_Wrangling.ipynb, 04_SpaceX_EDA_SQL.ipynb, 05_SpaceX_EDA_Data_Visualization.ipynb, 06_SpaceX_Interactive_Visual_Analytics_Folium.ipynb, 07_SpaceX_Interactive_Visual_Analytics_Plotly.py, 08_SpaceX_Predictive_Analytics.ipynb, README.md, SCR_SpaceX_PPT.pdf
+--- README (spacex failures systematic analysis\README.md) ---
+# SpaceX Launch Failure Capstone
+
+A complete data science and machine learning capstone project investigating SpaceX rocket landing success rates using BeautifulSoup scrapers, SQL, Folium maps, and Plotly Dash dashboards.
+
+# Overview
+Evaluating rocket landing success rates requires analyzing telemetry parameters, payload weights, orbit types, and launch sites. Manual compilation is error-prone and time-consuming. This Capstone project implements an end-to-end data science workflow. It scrapes launch tables from Wikipedia, runs SQL analyses, plots coordinates on interactive Folium maps, builds a Plotly Dash dashboard to visualize outcomes, and trains machine learning classifiers (Logistic Regression, SVM, Decision Trees, KNN) to predict landing success, illustrating a complete data pipeline.
+
+# Core Engineering Highlights
+* **Wikipedia Launch Table Scraper**: Uses BeautifulSoup and request libraries to parse HTML tables, extracting launch coordinates and payloads.
+* **SQL Exploratory Data Analysis**: Ingests dataset tables into SQLite databases, running queries to analyze launch statistics.
+* **Folium Interactive Maps**: Generates geospatial maps with coordinate markers and circle overlays indicating landing zones.
+* **Plotly Dash Analytics Portal**: Builds a Python dashboard server rendering real-time scatter plots and dropdown filters.
+* **ML Classifier Grid**: Trains and compares classifiers (SVM, KNN, Decision Trees), plotting confusion matrices.
+
+# System Architecture
+```mermaid
+graph TD
+    Wiki[Wikipedia HTML Tables] --> |Web Scraping| BeautifulSoup[BeautifulSoup Parser]
+    BeautifulSoup --> |Clean Data| CSV[Cleaned CSV Files]
+    CSV --> |SQL Ingestion| SQLite[(SQLite Database)]
+    CSV --> |Geospatial Mapping| Folium[Folium Interactive Maps]
+    CSV --> |Render Visuals| Dash[Plotly Dash Server]
+    CSV --> |Model Tuning| Classifiers[GridSearchCV ML Classifiers]
+```
+* **Data Harvester**: Scrapes and structures raw HTML launch records.
+* **Storage & Analytics
+
+==== PROJECT: speech recognisation ====
+Path: speech recognisation
+Technologies: 
+Total Files: 3
+Sample Files: .gitignore, README.md, Speech Recognition with Python.txt
+--- README (speech recognisation\README.md) ---
+# SpeechSTT - Speech-to-Text reference Guides
+
+A collection of reference notes and libraries mapping Python speech-to-text integration pipelines.
+
+# Overview
+An isolated reference repository detailing speech recognition architectures, microphone capturing setups, and audio transcription engines.
+
+
+==== PROJECT: t7_hackathon ====
+Path: t7_hackathon
+Technologies: TypeScript, JavaScript, CSS, HTML
+Total Files: 50
+Sample Files: .gitignore, Community Pulse - 8 hours.excalidraw, Community Pulse - 8 hours.pdf, Community Pulse - 8 hours.png, COMMUNITY PULSE.odp, EcoFinds Round 1.pdf, project.txt, readme.md, The Challenge_ _SynergySphere – Advanced Team Collaboration Platform_.pdf, project\.gitignore, project\eslint.config.js, project\index.html, project\package-lock.json, project\package.json, project\postcss.config.js, project\readme.md, project\tailwind.config.js, project\tsconfig.app.json, project\tsconfig.json, project\tsconfig.node.json
+--- README (t7_hackathon\readme.md) ---
+# CommunityPulse Client - React TS Frontend Dashboard
+
+A responsive, modular frontend dashboard for the CommunityPulse event aggregator platform, built with React, Vite, TypeScript, and Tailwind CSS.
+
+# Overview
+Fragmented event systems make discovery and booking difficult due to heavy, non-responsive interfaces. `CommunityPulse Client` provides a responsive frontend dashboard. Built with React and TypeScript, it structures grid layouts, card components (`EventCard.tsx`), and event filters, delivering an analytics-oriented discovery dashboard.
+
+# Core Engineering Highlights
+* **Vite React TS Build System**: Optimized bundler configurations featuring strict TypeScript types across component boundaries.
+* **Modular Component Grids**: Implements card components (`EventCard.tsx`) to display event details.
+* **Tailwind Layout Design**: Responsive page templates utilizing utility-first CSS classes.
+
+# Tech Stack & Rationale
+* **React + Vite** -> Fast build cycles and low bundle size.
+* **TypeScript** -> Guarantees type-safety across components.
+* **TailwindCSS** -> Clean styling without heavy CSS stylesheets.
+
+# Future Expansion
+* **Live API Sync**: Connect the frontend to a Flask/PostgreSQL event backend.
+* **Interactive Map**: Integrate Leaflet.js to allow location-based event searches.
+
+# Developer Notes
+This dashboard was designed to build a clean event discovery UI, focusing on component reusability and type-safety.
+
+
+--- README (t7_hackathon\project\readme.md) ---
+# 🌐 Community Pulse
+
+Community Pulse is a location-aware community engagement platform designed to facilitate interaction, visibility, and participation within local neighborhoods. Users can discover, share, and register interest in community events such as garage sales, sports matches, volunteer drives, and more — all from a web or mobile interface.
+
+---
+
+## 🚀 Features
+
+- 🔍 Search and explore local events by location and category
+- 📝 Users can post, edit, and delete their own events
+- 📱 Mobile-responsive and mobile-compatible interface
+- ❤️ Express interest in events with just name, email, phone, and attendee count
+- 🔔 Get notifications via Email, SMS, or WhatsApp for:
+  - Event reminders (1 day before)
+  - Changes in event details (time, location, or cancellation)
+- 🛡️ Admin dashboard for event moderation, user bans, and status control
+
+---
+
+## 🎯 Event Categories
+
+- Garage Sales
+- Sports Matches (e.g., cricket, football, tennis)
+- Community Classes (e.g., yoga, art, workshops)
+- Volunteer Opportunities (e.g., clean-up drives, donation camps)
+- Exhibitions
+- Local Festivals and Celebrations
+
+---
+
+## 👤 User Roles
+
+### Guest
+- Browse and search events without logging in
+
+### Registered User
+- Register/Login with name, email, phone, password
+- Post/edit/delete personal events
+- Mark interest in events with minimal info
+- View registered events under "My Events"
+
+### Admin
+- View and moderate submitted events
+- Approve/reject event listings
+- Flag and remove inappropriate content
+- Assign “Verified Organizer” status
+- View event participation history per user
+- Ban users if needed
+
+---
+
+## 🛠️ Tech Stack
+
+> _Fill in your final chosen stack below._
+
+- **Frontend**: React.js / [React Native or Flutter for mobile]
+- **Backend**: Node.js / Express.js or Django
+- **Database**: MongoDB / PostgreSQL
+- **Authentication**: JWT-based or Session-based auth
+- **Notifications**: Twilio, SendGrid, WhatsApp API
+- **Deployment**: [AWS / Firebase / Heroku / Vercel]
+
+---
+
+## 📂 Folder Str
+
+--- README (t7_hackathon\project\.bolt\readme.md) ---
+
+
+==== PROJECT: team 7 ====
+Path: team 7
+Technologies: 
+Total Files: 13
+Sample Files: .gitignore, ANIRUDH-removebg-preview.png, ANIRUDH.jpg, aryan.jpeg-removebg-preview.png, aryan.jpeg.jpg, ayushman-removebg-preview.png, ayushman.jpg, create a background image for team members.png, FARM RENT.pdf, FARM RENT.pptx, README.md, sree chakra reddy.jpg, sree_chakra_reddy-removebg-preview.png
+--- README (team 7\README.md) ---
+# Team7 Slides - Farm Rental Pitch Deck
+
+Business proposals and slides for the Agri-Rental farm management platform.
+
+# Overview
+This folder contains the business proposals and slides for the Agri-Rental platform proposed by Team 7, detailing market opportunities and platform concepts.
+
+
+==== PROJECT: titanic classification ====
+Path: titanic classification
+Technologies: Python
+Total Files: 5
+Sample Files: .gitignore, image.png, readme.md, titanic model.py, titanic.csv
+--- README (titanic classification\readme.md) ---
+# TitanicPredictor - Kaggle Machine Learning Pipeline
+
+A classic machine learning data science pipeline predicting passenger survival rates on the Titanic, deploying data cleansing, feature scaling, and GridSearchCV classifications.
+
+# Overview
+Tabular datasets from public challenges are often noisy and contain missing fields, making model training unstable. `TitanicPredictor` implements an end-to-end classification pipeline. It loads demographic records, imputes missing values (age, embarked), encodes categories, scales features, and evaluates classifiers (Logistic Regression, Random Forest, XGBoost) using cross-validation, predicting passenger survival.
+
+# Core Engineering Highlights
+* **Feature Engineering Pipeline**: Imputes missing fields, one-hot encodes category features, and standardizes numeric columns.
+* **Model Grid Search**: Optimizes hyperparameters (n_estimators, max_depth) using cross-validation loops.
+* **Metrics Comparison**: Compares classifiers using confusion matrices, precision-recall, and ROC-AUC curves.
+
+# Tech Stack & Rationale
+* **Python** -> Standard programming interface for data science.
+* **Pandas & NumPy** -> Vectorized data manipulation.
+* **Scikit-learn** -> Standard preprocessing scaling, cross-validation, and models.
+* **XGBoost** -> Tree-boosting algorithm for tabular prediction.
+
+# Future Expansion
+* **Deep Tabular Models**: Implement PyTorch TabNet to benchmark deep learning models against gradient boosted trees.
+* **API Service**: Deploy the model to an API endpoint using FastAPI.
+
+# Developer Notes
+This pipeline was built to explore feature scaling and model selection, focusing on data cleansing and parameter tuning.
+
+
+==== PROJECT: vehicle_parking_app ====
+Path: vehicle_parking_app
+Technologies: CSS, Python, JavaScript, HTML
+Total Files: 23
+Sample Files: .gitignore, database.db, database.py, readme.md, requirements.txt, run.py, app\models.py, app\routes.py, app\__init__.py, app\static\style.css, app\static\images\cars\car 1.png, app\static\images\cars\car 2.png, app\static\images\cars\car 3.png, app\templates\admin_dashboard.html, app\templates\base.html, app\templates\book_spot.html, app\templates\car.html, app\templates\chart.js, app\templates\charts.html, app\templates\create_lot.html
+--- README (vehicle_parking_app\readme.md) ---
+# ParkSync - Flask Vehicle Parking Reservation Portal
+
+A full-stack vehicle parking spot reservation and management system designed with Flask, SQLAlchemy, SQLite, Bootstrap, and Chart.js.
+
+# Overview
+Urban vehicle parking is often inefficient due to lack of real-time spot tracking, leading to congestion and manual reservation errors. `ParkSync` provides a full-stack vehicle parking spot reservation platform. Built on Flask and SQLAlchemy, it structures role-based access control (Admin vs User), manages database relations (ParkingLot ➔ ParkingSpot ➔ Reservation), and integrates Chart.js to display occupancy analytics, automating parking spot management.
+
+# Core Engineering Highlights
+* **Relational Database Design**: Employs SQLAlchemy to map parking lots, spots, and reservations, implementing cascade deletion rules.
+* **Role-Based Access Control**: Separates views for Admins (manage lots/spots, view users, set pricing) and Users (view spots, book/release spots).
+* **Interactive Chart.js Dashboard**: Renders real-time statistics of occupancy and revenue for administrator audits.
+* **Double-Booking Prevention**: Enforces transaction-level checks to prevent double-booking of parking spots.
+
+# System Architecture
+```mermaid
+graph TD
+    User[Admin / User Client] --> |HTTP Request| App[Flask Web Server]
+    App --> |Authentication Check| Auth[Flask-Login Manager]
+    Auth --> |Query database| SQLAlchemy[SQLAlchemy ORM]
+    SQLAlchemy --> |Write Transaction| DB[(database.db SQLite)]
+    App --> |Render Dashboard| Jinja[Jinja2 HTML Templates]
+    App --> |Analytics Data| ChartJS[Chart.js Rendering]
+```
+* **API Routing Tier**: Flask server managing auth, reservations, and admin panels.
+* **Database Broker**: SQLAlchemy managing database transactions.
+* **Visualization Layer**: Jinja2 templates and Chart.js dashboards.
+
+# Tech Stack & Engineering Rationale
+* **Flask (Python)** -> Lightweight MVC design enabling rapid systems development.
+* **SQLAlchemy** -> Relational datab
+
+==== PROJECT: voice multi ====
+Path: voice multi
+Technologies: Docker, JavaScript, CSS, HTML
+Total Files: 37
+Sample Files: .gitignore, docker-compose.yml, package-lock.json, README.md, backend\.env, backend\Dockerfile, backend\package-lock.json, backend\package.json, backend\src\server.js, backend\src\config\groqConfig.js, backend\src\middleware\cors.js, backend\src\routes\chat.js, backend\src\services\groqService.js, backend\src\services\sttService.js, backend\src\services\ttsService.js, frontend\.env.example, frontend\package-lock.json, frontend\package.json, frontend\postcss.config.js, frontend\tailwind.config.js
+--- README (voice multi\README.md) ---
+# VoiceOrchestrator - Multi-Agent Voice Automation Portal
+
+An interactive voice command console built on Node.js, Express, and React, translating spoken commands into structured JSON automation scripts via the Web Speech API and Groq models.
+
+# Overview
+Standard voice interfaces (like Alexa or Siri) run on closed ecosystems that are difficult to customize or integrate into custom web developer environments. `VoiceOrchestrator` provides an interactive voice command console. It captures microphone inputs via the browser Web Speech API, routes transcriptions to Groq models (Express backend) to translate spoken phrases into structured JSON automation scripts, and executes actions on the React frontend dashboard, enabling hands-free web control.
+
+# Core Engineering Highlights
+* **Web Speech API STT/TTS**: Captures browser-native audio streams and translates them to text, returning voice responses.
+* **JSON Action Spec Parser**: Translates LLM completions into structured JSON automation scripts (e.g. navigation, scrolling, clicking).
+* **Visual Log Panel**: Implements an interactive execution feed rendering inputs, JSON scripts, and model outputs.
+* **Express API proxy**: Interfaces securely with the Groq API, protecting API keys.
+
+# System Architecture
+```mermaid
+graph TD
+    UserVoice[User Spoken Command] --> |Browser Mic| WebSpeech[Web Speech API STT]
+    WebSpeech --> |Command Transcription| React[React Frontend]
+    React --> |HTTP POST| Express[Express Backend]
+    Express --> |Model Inference| Groq[Groq API completions]
+    Groq --> |JSON Action Script| Express
+    Express --> |Relay Payload| React
+    React --> |Execute JSON Steps| Automation[Automation Log UI]
+```
+* **Client Interface**: React UI capturing audio and displaying execution logs.
+* **Backend API Gateway**: Express.js server proxying Groq API queries.
+* **Execution Engine**: Translates JSON scripts into frontend component actions.
+
+# Tech Stack & Engineering Rationale
+* **React + Vite** -> Fast dashbo
+
+==== PROJECT: voice-circle-ai ====
+Path: voice-circle-ai
+Technologies: Docker, JavaScript, CSS, HTML
+Total Files: 46
+Sample Files: .gitignore, docker-compose.yml, package-lock.json, README.md, backend\.env, backend\Dockerfile, backend\package-lock.json, backend\package.json, backend\src\server.js, backend\src\config\groqConfig.js, backend\src\config\models.js, backend\src\middleware\cors.js, backend\src\middleware\rateLimiter.js, backend\src\middleware\requestLogger.js, backend\src\routes\chat.js, backend\src\services\groqService.js, backend\src\services\healthService.js, backend\src\services\sttService.js, backend\src\services\ttsService.js, backend\src\utils\errorHandler.js
+--- README (voice-circle-ai\README.md) ---
+# VoiceCircleAI - Multimodal Voice Assistant
+
+A production-grade, containerized multimodal voice assistant featuring a state-aware animated circle UI, Express API proxies, and TTL-based in-memory caching.
+
+# Overview
+Deploying voice assistants introduces challenges including slow TTS response times, duplicate API query costs, and complex local development setups. `VoiceCircleAI` provides a containerized multimodal voice assistant. It features an animated circle UI that shifts states (`listening`, `processing`, `speaking`), routes calls through an Express backend proxying Groq APIs, implements a Time-To-Live (TTL) cache to save API usage costs, and containerizes services using Docker Compose, delivering a production-ready assistant.
+
+# Core Engineering Highlights
+* **State-Aware Canvas UI**: Implements a responsive React circle avatar that shifts colors, dimensions, and animations dynamically.
+* **In-Memory TTL Cache**: Features backend caching with Time-To-Live (TTL) parameters to store recent queries, minimizing duplicate API requests.
+* **Express API Gateway**: Proxies requests securely to Groq APIs (Llama, Mixtral, Gemma).
+* **Operations Security**: Configures rate limiters, request loggers, and error handlers.
+* **Multi-Container Docker Deployment**: Containerizes frontend, backend, and Nginx proxy servers using Docker Compose.
+
+# System Architecture
+```mermaid
+graph TD
+    Client[React Animated Canvas] --> |Speech Query| Express[Express API Gateway]
+    Express --> |Check Cache| TTL[In-Memory TTL Cache]
+    TTL --> |Cache Hit| Express
+    TTL --> |Cache Miss| Groq[Groq API completions]
+    Groq --> |JSON Reply| Express
+    Express --> |Save in Cache & Return| Client
+```
+* **Client Interface**: React interface rendering animated state circles and managing Web Speech loops.
+* **API Service Gateway**: Express backend routing requests and auditing rate limits.
+* **Operations Tier**: Request loggers and rate limiters protecting endpoints.
+* **Container Cluster**: Do
+
